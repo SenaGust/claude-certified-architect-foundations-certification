@@ -1,0 +1,5 @@
+anthropic
+jupyter
+notebook
+ipykernel
+python-dotenv

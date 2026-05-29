@@ -26,15 +26,16 @@ source .venv/bin/activate
 
 ```bash
 pip install --upgrade pip
-pip install jupyter notebook ipykernel anthropic
+pip install jupyter notebook ipykernel anthropic python-dotenv
 ```
 
-| Package | Purpose |
-|---|---|
-| `jupyter` | Core Jupyter tooling |
-| `notebook` | Classic Jupyter Notebook UI |
-| `ipykernel` | Connects the Python environment to Jupyter |
-| `anthropic` | Anthropic Python SDK (Claude API) |
+| Package         | Purpose                                    |
+| --------------- | ------------------------------------------ |
+| `jupyter`       | Core Jupyter tooling                       |
+| `notebook`      | Classic Jupyter Notebook UI                |
+| `ipykernel`     | Connects the Python environment to Jupyter |
+| `anthropic`     | Anthropic Python SDK (Claude API)          |
+| `python-dotenv` | Loads variables from a `.env` file         |
 
 ---
 
@@ -50,17 +51,20 @@ This makes the kernel available in the Jupyter UI as **Python (claude-certificat
 
 ## 4. Set your Anthropic API key
 
-The notebooks call the Claude API. Export your key before launching Jupyter:
+Create a `.env` file in the repository root:
 
-```bash
-export ANTHROPIC_API_KEY="sk-ant-..."
+```
+ANTHROPIC_API_KEY=sk-ant-...
 ```
 
-To avoid repeating this step, add the line to your shell profile (`~/.zshrc`):
+Then load it at the top of each notebook before using the Anthropic client:
 
-```bash
-echo 'export ANTHROPIC_API_KEY="sk-ant-..."' >> ~/.zshrc
-source ~/.zshrc
+```python
+from dotenv import load_dotenv
+load_dotenv()  # reads .env and sets environment variables
+
+import anthropic
+client = anthropic.Anthropic()  # automatically picks up ANTHROPIC_API_KEY
 ```
 
 ---
@@ -102,9 +106,9 @@ jupyter notebook        # or: jupyter lab
 
 ## Troubleshooting
 
-| Symptom | Fix |
-|---|---|
-| `ModuleNotFoundError: anthropic` | Confirm the venv is active (`which python` should point to `.venv/bin/python`) and reinstall: `pip install anthropic` |
-| `AuthenticationError` from the API | Verify `echo $ANTHROPIC_API_KEY` prints the correct key |
-| Kernel not listed | Re-run the `ipykernel install` command in step 3 |
-| Old pip warnings | Run `pip install --upgrade pip` |
+| Symptom                            | Fix                                                                                                                              |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `ModuleNotFoundError: anthropic`   | Confirm the venv is active (`which python` should point to `.venv/bin/python`) and reinstall: `pip install anthropic`            |
+| `AuthenticationError` from the API | Check that `.env` exists, contains `ANTHROPIC_API_KEY=sk-ant-...`, and that `load_dotenv()` is called before creating the client |
+| Kernel not listed                  | Re-run the `ipykernel install` command in step 3                                                                                 |
+| Old pip warnings                   | Run `pip install --upgrade pip`                                                                                                  |
