@@ -32,26 +32,32 @@ jupyter notebook   # or: jupyter lab
 Every notebook starts with:
 
 ```python
+import os
 from dotenv import load_dotenv
-load_dotenv()
-
 from anthropic import Anthropic
 
-client = Anthropic()
-model = "claude-sonnet-4-0"
+load_dotenv()
+
+auth_token = os.getenv("ANTHROPIC_API_KEY")
+
+client = Anthropic(
+    auth_token=auth_token,
+    base_url="https://flow.ciandt.com/flow-llm-proxy/"
+)
+
+model = "bedrock/anthropic.claude-4-6-sonnet"
 ```
+
+The API calls go through a CI&T Flow proxy — do not use the plain `Anthropic()` constructor.
 
 ## Repository structure
 
 ```
 courses/
   <course-name>/
-    <lesson-number>. <lesson-name>/
-      code.ipynb   # exercise notebook
-      README.md    # lesson notes
-lessons/           # scratch/personal notebooks outside course structure
+    NN. <lesson-name>/   # zero-padded lesson number (e.g. 05, 06)
+      code.ipynb         # exercise notebook
+      README.md          # lesson notes
 requirements.txt
-SETUP.md           # full environment setup walkthrough
+SETUP.md                 # full environment setup walkthrough
 ```
-
-Lessons follow the naming convention `module-NN-<topic>/NN-<name>.ipynb` inside `lessons/`.
