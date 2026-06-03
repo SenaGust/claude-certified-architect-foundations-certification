@@ -1,14 +1,17 @@
 [
   {
-    "task": "Create a JSON configuration object for an AWS S3 bucket lifecycle policy that deletes objects after 90 days and transitions them to Glacier after 30 days",
-    "format": "json"
+    "task": "Create a Python function that validates if a given string is a valid AWS S3 bucket name according to AWS naming rules (3-63 characters, lowercase letters, numbers, hyphens only, must start and end with letter or number)",
+    "format": "python",
+    "solution_criteria": "The function should return a boolean and handle edge cases like consecutive hyphens, leading/trailing hyphens, and uppercase letters"
   },
   {
-    "task": "Write a Python function that takes an AWS IAM policy document (as a dictionary) and returns a list of all the AWS service actions (e.g., 's3:GetObject') that are allowed",
-    "format": "python"
+    "task": "Create a JSON configuration object for an AWS Lambda function that accepts HTTP requests via API Gateway, includes environment variables for a database connection string and API key, and has a 30-second timeout",
+    "format": "json",
+    "solution_criteria": "The JSON should be structured as a valid AWS Lambda configuration with proper nesting of environment variables and runtime settings"
   },
   {
-    "task": "Create a regex pattern that validates and extracts the region code from an AWS ARN (Amazon Resource Name) string, such as 'arn:aws:s3:::my-bucket' or 'arn:aws:ec2:us-east-1:123456789012:instance/i-1234567890abcdef0'",
-    "format": "regex"
+    "task": "Create a regular expression that matches valid AWS IAM role ARNs in the standard format (arn:aws:iam::account-id:role/role-name)",
+    "format": "regex",
+    "solution_criteria": "The regex should validate the ARN structure, account ID format (12 digits), and allow role names with alphanumeric characters, hyphens, and forward slashes"
   }
 ]
