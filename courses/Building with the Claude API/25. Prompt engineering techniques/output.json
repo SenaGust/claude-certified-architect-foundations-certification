@@ -1,0 +1,855 @@
+[
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Climate change mitigation\",\n    \"Carbon pricing mechanisms\",\n    \"Cap-and-trade systems\",\n    \"Regulatory standards\",\n    \"Command-and-control regulations\",\n    \"Emissions trading\",\n    \"European Union Emissions Trading System\",\n    \"Clean Air Act\",\n    \"Market-based instruments\",\n    \"Economic incentives\",\n    \"Emission limits\",\n    \"Cost-efficiency\",\n    \"Compliance burden\",\n    \"Environmental policy\",\n    \"Hybrid policy approaches\",\n    \"Industrial emissions reduction\",\n    \"Technology standards\",\n    \"Distributional equity\",\n    \"Political economy of climate policy\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "This study examines the divergent approaches to climate change mitigation through a comparative analysis of carbon pricing mechanisms and regulatory standards. While market-based instruments such as cap-and-trade systems leverage economic incentives to reduce emissions by allowing firms to trade allowances, command-and-control regulations establish fixed emission limits that mandate compliance regardless of cost considerations. The European Union's Emissions Trading System demonstrates the cap-and-trade model's effectiveness in reducing industrial emissions by 35% since 2005, whereas the United States' Clean Air Act regulations have achieved comparable pollution reductions through prescriptive technology standards. Both frameworks present distinct trade-offs: carbon pricing mechanisms offer cost-efficiency and flexibility but face political resistance, while regulatory standards provide certainty and equity but may impose higher compliance burdens on smaller enterprises. Recent literature suggests hybrid approaches combining elements of both mechanisms could optimize environmental outcomes while addressing distributional concerns."
+      },
+      "solution_criteria": [
+        "Extracts all major topics including carbon pricing, cap-and-trade systems, regulatory standards, emissions trading, and compliance mechanisms",
+        "Distinguishes between comparative topics (e.g., market-based vs. command-and-control approaches) as separate identifiable topics",
+        "Returns results as a valid JSON array of strings"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with passages emphasizing comparative analysis between topics"
+    },
+    "score": 3,
+    "reasoning": "The solution violates a mandatory requirement by including markdown formatting (~~~json) around the JSON object. The mandatory requirement explicitly states 'Response should contain the JSON array and nothing else,' and the presence of the ~~~ delimiters constitutes extra commentary/formatting. While the JSON content itself is valid and contains appropriate topics that meet the secondary criteria well, this formatting violation is a clear breach of the mandatory requirements. According to the scoring guidelines, any violation of a mandatory requirement must result in a score of 3 or lower."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Machine Learning\",\n    \"Deep Neural Networks\",\n    \"Natural Language Processing\",\n    \"Bias in Training Data\",\n    \"Model Bias\",\n    \"Transfer Learning\",\n    \"Multilingual Models\",\n    \"Computational Costs\",\n    \"Environmental Impact\",\n    \"Model Interpretability\",\n    \"Explainability\",\n    \"Black Box Models\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "So basically, what we found is pretty interesting\u2014machine learning models, especially deep neural networks, are getting way better at handling natural language processing tasks. But here's the thing: we're still running into issues with bias in training data, which then gets baked into the model outputs. Meanwhile, transfer learning has become this game-changer because you can take a model trained on one language and adapt it to another without starting from scratch. The computational costs are still pretty hefty though, which raises questions about the environmental impact of training these massive models. Oh, and we should probably mention that interpretability remains a major challenge\u2014nobody really knows what's happening inside these black boxes."
+      },
+      "solution_criteria": [
+        "Extracts all major topics discussed, including machine learning models, natural language processing, bias in training data, transfer learning, computational costs, environmental impact, and model interpretability",
+        "Returns results as a JSON array of strings",
+        "Identifies topics despite the informal, conversational tone and casual language markers (e.g., 'basically,' 'pretty interesting,' 'the thing is')"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with conversational or informal scholarly writing"
+    },
+    "score": 3,
+    "reasoning": "The solution violates a mandatory requirement by wrapping the JSON in markdown code fences (~~~json...~~~) rather than providing pure JSON. The mandatory criteria explicitly state 'Response should contain the JSON array and nothing else.' While the content itself is a valid JSON array of strings with relevant topics, the formatting violation is a critical failure. Additionally, there are minor quality issues with redundant topics and slight over-inference, but these are secondary concerns compared to the formatting violation."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Intellectual property rights\",\n    \"Digital age policy reforms\",\n    \"Patent law\",\n    \"Software patents\",\n    \"Algorithmic innovations\",\n    \"Copyright protection\",\n    \"Digital distribution\",\n    \"Streaming piracy\",\n    \"Data privacy regulations\",\n    \"General Data Protection Regulation (GDPR)\",\n    \"Personal information handling\",\n    \"Technology compliance\",\n    \"Trade secret protection\",\n    \"Industrial espionage\",\n    \"Proprietary algorithms\",\n    \"Non-patented innovations\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "The evolution of intellectual property rights in the digital age has necessitated significant policy reforms across multiple jurisdictions. Patent law frameworks have struggled to accommodate software and algorithmic innovations, while copyright protections have been extended to address concerns about unauthorized digital distribution and streaming piracy. Simultaneously, data privacy regulations such as the General Data Protection Regulation (GDPR) have established stringent requirements for personal information handling, creating compliance burdens for technology companies. Trade secret protection mechanisms have also been strengthened to counter industrial espionage and unauthorized access to proprietary algorithms, reflecting the growing economic value of non-patented innovations in competitive markets."
+      },
+      "solution_criteria": [
+        "Extracts all major legal and policy domains mentioned (patent law, copyright, data privacy, trade secrets)",
+        "Returns output as a JSON array of strings",
+        "Captures specific regulatory frameworks and mechanisms referenced (GDPR, digital distribution protections)"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with legal and policy-related passages"
+    },
+    "score": 3,
+    "reasoning": "The solution meets the core mandatory requirements of containing a JSON array of strings with topics extracted from the passage. However, it violates the strict requirement that the response should contain 'the JSON array and nothing else' by wrapping it in markdown code fences (~~~json). This is a technical violation of the mandatory requirements. The topic extraction itself is comprehensive and covers all major domains and specific frameworks mentioned in the text, meeting the secondary criteria well. The violation of response format is a clear breach of mandatory requirements."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"socioeconomic status (SES)\",\n    \"post-operative complications\",\n    \"infection rates\",\n    \"sepsis\",\n    \"household income\",\n    \"logistic regression analysis\",\n    \"multivariate regression\",\n    \"patient outcomes\",\n    \"comorbidities\",\n    \"surgical complications\",\n    \"geographic variation\",\n    \"urban vs rural healthcare\",\n    \"Bayesian imputation\",\n    \"missing data handling\",\n    \"sensitivity analysis\",\n    \"health disparities\",\n    \"longitudinal study design\",\n    \"hospital-based research\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "This longitudinal study analyzed 2,847 patient records across 12 hospitals using multivariate regression analysis to examine the relationship between socioeconomic status (SES) and post-operative complications. Results indicated a statistically significant negative correlation (r = -0.42, p < 0.001) between household income and infection rates. Logistic regression models controlling for age, comorbidities, and surgical type revealed that patients in the lowest income quartile had 3.2 times higher odds of developing sepsis (95% CI: 2.1-4.8). Stratified analysis by geographic region showed variation in effect sizes, with urban hospitals demonstrating stronger SES-outcome associations (OR = 3.8) compared to rural facilities (OR = 2.1). The study employed Bayesian imputation techniques to handle 8.3% missing data and conducted sensitivity analyses confirming robustness of findings across multiple model specifications."
+      },
+      "solution_criteria": [
+        "Extracts all major research topics (study design, statistical methods, outcome measures, variables examined, results)",
+        "Identifies specific quantitative/methodological topics (regression analysis, logistic models, correlation, sensitivity analysis)",
+        "Returns output as a JSON array of strings",
+        "Omits minor details while capturing distinct conceptual topics"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with statistical or data-heavy passages"
+    },
+    "score": 9,
+    "reasoning": "The solution meets all mandatory requirements: it is valid JSON containing an array of strings, each string is a topic without commentary, and the response contains only the JSON array. It also performs well on secondary criteria by capturing study design (longitudinal study design, hospital-based research), statistical methods (multivariate regression, logistic regression, Bayesian imputation, sensitivity analysis, correlation), outcome measures (post-operative complications, infection rates, sepsis), and key variables (socioeconomic status, household income, comorbidities, geographic variation). The main limitation is the inclusion of a few inferred topics that aren't explicitly stated in the passage, though these are reasonable interpretations. The extraction is thorough and well-balanced between specificity and avoiding minor details."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Gut microbiota composition\",\n    \"Host immune responses\",\n    \"Pathogenic infection\",\n    \"16S rRNA gene sequencing\",\n    \"Bacterial diversity\",\n    \"Firmicutes/Bacteroidetes ratio\",\n    \"Inflammatory cytokines (IL-6, TNF-\u03b1)\",\n    \"Akkermansia muciniphila\",\n    \"Barrier function\",\n    \"Mucus layer\",\n    \"Germ-free mice\",\n    \"Microbiota reconstitution\",\n    \"Pathogen clearance\",\n    \"Immune competence\",\n    \"Microbial abundance\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "This study investigates the role of gut microbiota composition in modulating host immune responses to pathogenic infection. Using 16S rRNA gene sequencing on fecal samples from 150 mice, we identified significant differences in bacterial diversity and abundance between infected and control groups. Specifically, Firmicutes/Bacteroidetes ratios correlated inversely with inflammatory cytokine levels (IL-6, TNF-\u03b1), while Akkermansia muciniphila abundance was associated with enhanced barrier function through increased mucus layer thickness. Furthermore, germ-free mice reconstituted with microbiota from high-responder animals demonstrated improved pathogen clearance compared to those receiving low-responder microbiota, suggesting that microbial composition directly influences immune competence during infection."
+      },
+      "solution_criteria": [
+        "Extracts all major research topics and methodologies mentioned in the passage",
+        "Returns output as a JSON array of strings",
+        "Captures both specific organisms/variables (e.g., Akkermansia muciniphila, IL-6) and broader concepts (e.g., immune responses, bacterial diversity)"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with passages in different academic disciplines"
+    },
+    "score": 3,
+    "reasoning": "The solution meets the secondary criteria well\u2014it extracts comprehensive topics covering methodologies, specific organisms, variables, and broader concepts from the passage. However, it violates a mandatory requirement by wrapping the JSON in markdown code fences (~~~json...~~~) rather than providing only the JSON array itself. The instruction explicitly states 'Response should contain the JSON array and nothing else.' This is a clear violation of mandatory requirements."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Thermodynamics\",\n    \"Heat engines\",\n    \"Energy transfer\",\n    \"First law of thermodynamics\",\n    \"Conservation of energy\",\n    \"Second law of thermodynamics\",\n    \"Entropy\",\n    \"Disorder and irreversibility\",\n    \"Spontaneous processes\",\n    \"Equilibrium states\",\n    \"Statistical mechanics\",\n    \"Macroscopic observations\",\n    \"Microscopic molecular behavior\",\n    \"Probabilistic frameworks\",\n    \"Chemical reaction spontaneity\",\n    \"Process efficiency\",\n    \"Industrial processes\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "The foundational concept of thermodynamics emerged from early studies of heat engines and energy transfer, establishing the first law which articulates the conservation of energy in physical systems. Subsequently, the second law introduced entropy as a measure of disorder and irreversibility, fundamentally reshaping our understanding of spontaneous processes and equilibrium states. These principles form the bedrock upon which statistical mechanics was constructed, linking macroscopic observations to microscopic molecular behavior through probabilistic frameworks. The development of these core ideas revolutionized chemistry, physics, and engineering by providing unified explanations for phenomena ranging from chemical reaction spontaneity to the efficiency limits of industrial processes."
+      },
+      "solution_criteria": [
+        "Output is a valid JSON array of strings",
+        "Captures all major foundational concepts discussed (thermodynamics, first law, second law, entropy, statistical mechanics, molecular behavior, chemical reactions, process efficiency)",
+        "Topics are appropriately granular and distinct from one another"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with passages discussing foundational concepts in a field"
+    },
+    "score": 3,
+    "reasoning": "The solution meets the core mandatory requirements of containing a JSON array of strings with topics from the article, and each string contains only a topic without extra commentary. However, it critically violates the mandatory requirement that the 'Response should contain the JSON array and nothing else' by wrapping the JSON in markdown code fence syntax (~~~json). This is a clear violation of the explicit formatting instruction. The secondary criteria are otherwise well-met: all major concepts are captured, granularity is appropriate, and topics are distinct. The markdown wrapper is a formatting violation that must result in a lower score despite otherwise strong content."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"microplastic accumulation\",\n    \"oxidative stress\",\n    \"freshwater organisms\",\n    \"Daphnia magna\",\n    \"polyethylene microplastics\",\n    \"reactive oxygen species (ROS)\",\n    \"antioxidant enzyme activity\",\n    \"dose-dependent response\",\n    \"cellular damage mechanisms\",\n    \"bioaccumulation\",\n    \"digestive tissue retention\",\n    \"reproduction rates\",\n    \"trophic transfer\",\n    \"ecosystem resilience\",\n    \"anthropogenic disturbance\",\n    \"aquatic systems\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "This study investigates the relationship between microplastic accumulation and oxidative stress in freshwater organisms. We conducted a 12-week experimental trial exposing Daphnia magna to polyethylene microplastics at concentrations of 0.1, 1.0, and 10 mg/L, measuring reactive oxygen species (ROS) levels and antioxidant enzyme activity. Our findings demonstrate a dose-dependent increase in oxidative stress markers, with ROS levels increasing by 156% at the highest concentration. These results support the theoretical framework of cellular damage mechanisms in response to foreign particle ingestion. Additionally, we observed significant bioaccumulation patterns, with microplastic retention in digestive tissues correlating to reduced reproduction rates by 43%. The implications extend to broader ecological theory regarding trophic transfer and ecosystem resilience in anthropogenically disturbed aquatic systems."
+      },
+      "solution_criteria": [
+        "Extracts both empirical findings (e.g., specific measurements, percentages, experimental parameters) and theoretical/conceptual topics (e.g., oxidative stress, bioaccumulation, ecological theory)",
+        "Returns results as a JSON array of strings",
+        "Identifies distinct topics without duplicates"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with passages mixing primary research findings with theoretical topics"
+    },
+    "score": 9,
+    "reasoning": "The solution meets all mandatory requirements: it provides a valid JSON array of strings containing topics from the article, with no extraneous commentary, and the response contains only the JSON output. The secondary criteria are largely satisfied\u2014it extracts both empirical findings (ROS levels increasing 156%, reproduction rates reduced 43%, concentration parameters) and theoretical concepts (oxidative stress, bioaccumulation, trophic transfer, ecosystem resilience). Topics are distinct without duplicates. The main minor weakness is that some entries represent sub-topics or specific instances of broader concepts rather than independent topics, though this is a matter of granularity rather than a clear error. The extraction is thorough and well-balanced."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Machine Learning Algorithms\",\n    \"Anomaly Detection\",\n    \"Time-Series Financial Data\",\n    \"Statistical Methods\",\n    \"Feature Engineering\",\n    \"Model Accuracy\",\n    \"Computational Efficiency\",\n    \"High-Dimensional Datasets\",\n    \"Ensemble Methods\",\n    \"Neural Networks\",\n    \"Decision Trees\",\n    \"Prediction Robustness\",\n    \"Volatile Market Conditions\",\n    \"Comparative Analysis\",\n    \"Supervised Learning\",\n    \"Unsupervised Learning\",\n    \"Precision\",\n    \"Recall\",\n    \"F1-Score\",\n    \"Inference Time\",\n    \"Data Preprocessing\",\n    \"Model Generalization\",\n    \"Normalization\",\n    \"Dimensionality Reduction\",\n    \"Class Imbalance Handling\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "This study investigates three central research questions: (1) How do machine learning algorithms perform in detecting anomalies within time-series financial data compared to traditional statistical methods? (2) What is the impact of feature engineering techniques on model accuracy and computational efficiency in high-dimensional datasets? (3) Can ensemble methods combining neural networks and decision trees improve prediction robustness in volatile market conditions? Our experimental framework addresses these questions through comparative analysis of 15 different algorithms across 8 financial datasets spanning 2018-2023. We examine both supervised and unsupervised approaches, evaluating metrics including precision, recall, F1-score, and inference time. Additionally, we explore the relationship between data preprocessing strategies and model generalization, considering normalization, dimensionality reduction, and class imbalance handling techniques."
+      },
+      "solution_criteria": [
+        "Extracts all three primary research questions as distinct topics",
+        "Returns output as a valid JSON array of strings",
+        "Captures key methodological topics (e.g., machine learning algorithms, feature engineering, ensemble methods, evaluation metrics)"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with passages containing multiple research questions as topics"
+    },
+    "score": 6,
+    "reasoning": "The solution meets the mandatory requirements by providing valid JSON with an array of strings containing topics from the article, with no extra commentary. However, it fails a key secondary criterion: the task explicitly requires extracting 'all three primary research questions as distinct topics,' but the solution decomposes these questions into their component concepts rather than preserving them as topics. For example, research question (1) about machine learning vs. statistical methods is split into separate topics rather than being captured as a unified research question topic. While the solution demonstrates strong coverage of methodological topics and evaluation metrics, the failure to address the three research questions as distinct topics represents a significant deficiency against the stated criteria."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Radioactivity\",\n    \"Atomic structure\",\n    \"Nuclear physics\",\n    \"Element discovery\",\n    \"Polonium\",\n    \"Radium\",\n    \"Nobel Prize\",\n    \"Women in science\",\n    \"Gender equity in STEM\",\n    \"Physics education\",\n    \"Medical diagnostics\",\n    \"X-ray technology\",\n    \"World War I applications\",\n    \"Scientific ethics\",\n    \"Experimental research\",\n    \"History of science\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Marie Curie's groundbreaking work in radioactivity fundamentally transformed our understanding of atomic structure and energy. Born in Warsaw in 1867, she emigrated to Paris to pursue advanced studies in physics, becoming the first woman to earn a doctorate in physics. Her systematic investigation of uranium compounds led to the discovery of two new elements, polonium and radium, work for which she received the Nobel Prize in Physics in 1903, shared with Pierre Curie and Henri Becquerel. Beyond her scientific achievements, Curie's career challenged prevailing gender norms in academia and science, establishing a precedent for women's participation in rigorous experimental research. During World War I, she developed mobile radiography units, known as 'petites Curies,' which provided X-ray services to field hospitals, demonstrating the practical applications of her theoretical discoveries. Her legacy extends across multiple domains: nuclear physics, medical diagnostics, gender equity in STEM fields, and the ethical implications of scientific discovery."
+      },
+      "solution_criteria": [
+        "Extracts all major topics covered in the biographical passage (e.g., radioactivity, element discovery, Nobel Prize, gender barriers, medical applications, scientific legacy)",
+        "Returns output as a JSON array of strings",
+        "Topics are distinct and non-redundant"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with biographical or case study passages"
+    },
+    "score": 8,
+    "reasoning": "The solution meets all mandatory requirements: it contains a valid JSON array of strings with only topic names and no extra commentary. The response is JSON-only as required. Regarding secondary criteria, it successfully extracts the major topics from the passage including radioactivity, atomic structure, element discovery, Nobel Prize, women in science, gender equity, medical diagnostics, X-ray technology, and scientific ethics. However, there are minor issues with topic selection\u2014'Physics education' is not explicitly covered in the passage, and 'History of science' is inferred rather than directly stated. Additionally, listing 'Polonium' and 'Radium' as separate topics alongside 'Element discovery' introduces some redundancy, though they are technically distinct. These are minor deficiencies that don't violate mandatory requirements but slightly reduce alignment with the secondary criteria of being 'distinct and non-redundant.'"
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Convolutional Neural Networks (CNN)\",\n    \"Neural Architecture Search (NAS)\",\n    \"Quantization-Aware Training (QAT)\",\n    \"Reinforcement Learning\",\n    \"Depthwise Separable Convolutions\",\n    \"Inverted Residual Blocks\",\n    \"Mixed-Precision Quantization\",\n    \"Model Compression\",\n    \"Knowledge Distillation\",\n    \"Batch Normalization Folding\",\n    \"Edge Device Inference\",\n    \"Network Pruning\",\n    \"Model Optimization\",\n    \"Automated Machine Learning\",\n    \"Resource-Constrained Environments\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "This paper presents a novel approach to optimizing convolutional neural network (CNN) architectures through automated neural architecture search (NAS) combined with quantization-aware training (QAT). We leverage reinforcement learning agents to explore the design space of depthwise separable convolutions and inverted residual blocks, while simultaneously applying mixed-precision quantization to reduce model size by 87% without significant accuracy degradation. Our implementation utilizes knowledge distillation from a teacher network and incorporates batch normalization folding techniques to achieve inference speedup on edge devices. The proposed method demonstrates superior performance compared to manual architecture engineering and traditional pruning approaches, particularly when deployed on resource-constrained environments with limited memory bandwidth and computational capacity."
+      },
+      "solution_criteria": [
+        "Extracts all major technical concepts and methodologies mentioned in the passage",
+        "Returns output as a valid JSON array of strings",
+        "Identifies domain-specific terminology (e.g., neural architecture search, quantization-aware training, depthwise separable convolutions)"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with highly technical jargon from computer science"
+    },
+    "score": 9,
+    "reasoning": "The solution meets all mandatory requirements: it contains a valid JSON array of strings with topics only (no extra commentary), and the response is JSON only. It successfully extracts all explicitly mentioned major concepts from the passage including CNN, NAS, QAT, reinforcement learning, depthwise separable convolutions, inverted residual blocks, mixed-precision quantization, knowledge distillation, batch normalization folding, edge device inference, and network pruning. However, it includes a few topics that are inferred rather than explicitly stated in the text ('Automated Machine Learning' and the generic 'Model Optimization'), which slightly exceeds the scope of direct extraction. Despite this minor overreach, the solution demonstrates strong understanding of the domain and captures the essential technical content effectively."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"CRISPR gene editing\",\n    \"sickle cell disease treatment\",\n    \"hemoglobin modification\",\n    \"germline engineering\",\n    \"bioethics\",\n    \"equitable access to therapeutics\",\n    \"genetic therapy\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Recent advances in CRISPR gene editing have demonstrated efficacy in treating sickle cell disease through targeted hemoglobin modification, while simultaneously raising ethical concerns about germline engineering and equitable access to therapeutic interventions."
+      },
+      "solution_criteria": [
+        "Output is a valid JSON array of strings",
+        "All distinct topics from the passage are included",
+        "Topics are concise and directly extracted from the text"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with a very short passage (1-2 sentences)"
+    },
+    "score": 3,
+    "reasoning": "The solution violates a mandatory requirement by including markdown formatting around the JSON output. The instructions explicitly state 'Response should contain the JSON array and nothing else.' Additionally, 'genetic therapy' is inferred rather than directly extracted from the text. While the core JSON structure is valid and most topics are accurately captured, the formatting violation and one inferred topic prevent this from meeting all mandatory requirements."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Quantum mechanics epistemology\",\n    \"Classical determinism\",\n    \"Quantum computing hardware\",\n    \"Quantum cryptography\",\n    \"Optimization problems\",\n    \"Superconducting qubits\",\n    \"Quantum coherence\",\n    \"Quantum algorithms\",\n    \"Drug discovery\",\n    \"Financial modeling\",\n    \"Quantum superposition\",\n    \"Wave function collapse\",\n    \"Quantum interpretation\",\n    \"Causality\",\n    \"Physical reality\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "The epistemological implications of quantum mechanics have long challenged classical determinism, yet recent advances in quantum computing hardware demonstrate concrete applications in cryptography and optimization problems. Researchers have developed superconducting qubit arrays with coherence times exceeding 100 microseconds, enabling practical quantum algorithms for drug discovery and financial modeling. Simultaneously, the philosophical debate continues regarding the interpretation of quantum superposition and wave function collapse, with implications for our understanding of causality and the nature of physical reality itself."
+      },
+      "solution_criteria": [
+        "Extracts both concrete topics (quantum computing hardware, cryptography, drug discovery, financial modeling) and abstract topics (epistemology, determinism, interpretation of quantum mechanics, causality)",
+        "Returns results as a JSON array of strings",
+        "Includes all major topics mentioned in the passage without duplicates"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with a passage mixing concrete and abstract topics"
+    },
+    "score": 4,
+    "reasoning": "The solution meets the core mandatory requirements by providing a valid JSON structure with an array of topic strings, each containing only a topic without extra commentary. All major topics from the passage are captured and well-organized. However, there is a clear violation of the mandatory requirement stating 'Response should contain the JSON array and nothing else' - the solution is wrapped with ~~~json markers which constitute extraneous content. This is a technical violation of the explicit formatting requirement, though the actual JSON content itself is sound and comprehensive."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"machine learning\",\n    \"natural language processing\",\n    \"transformer architectures\",\n    \"deep learning\",\n    \"neural networks\",\n    \"language models\",\n    \"transfer learning\",\n    \"sentiment analysis\",\n    \"machine translation\",\n    \"machine learning benchmarks\",\n    \"machine learning frameworks\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Recent advances in machine learning have revolutionized natural language processing, with transformer architectures enabling unprecedented performance in machine learning tasks. The application of deep learning to natural language processing has demonstrated remarkable improvements in machine learning benchmarks. Furthermore, neural networks trained on large corpora have enhanced our understanding of language models, contributing significantly to the broader field of natural language processing and machine learning. Transfer learning approaches, particularly in machine learning frameworks, have accelerated development cycles across multiple natural language processing applications, from sentiment analysis to machine translation, all leveraging machine learning innovations."
+      },
+      "solution_criteria": [
+        "Extracts distinct topics without duplicating semantically equivalent terms (e.g., 'machine learning', 'natural language processing', 'transformer architectures', 'deep learning', 'neural networks', 'transfer learning')",
+        "Returns output as a JSON array of strings",
+        "Avoids including repetitive variations of the same topic concept"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with redundant or repetitive content across topics"
+    },
+    "score": 3,
+    "reasoning": "The solution meets the core mandatory requirements by providing a valid JSON array of topic strings without extra commentary. However, it fails the strict mandatory requirement that 'Response should contain the JSON array and nothing else' due to the markdown formatting wrapper. Additionally, while the secondary criteria about avoiding semantic duplication is mostly met, including 'machine learning benchmarks' and 'machine learning frameworks' as separate topics is questionable since these are contextual applications of the core 'machine learning' topic rather than distinct topics themselves. The inclusion of the markdown fence is a clear violation of the mandatory requirements."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Intermittent fasting\",\n    \"Metabolic health\",\n    \"Insulin sensitivity\",\n    \"Inflammation markers\",\n    \"Glucose homeostasis\",\n    \"Caloric restriction\",\n    \"Cortisol levels\",\n    \"Metabolic dysfunction\",\n    \"Cardiovascular outcomes\",\n    \"Atherosclerosis risk\",\n    \"Autophagy\",\n    \"LDL cholesterol\",\n    \"Triglycerides\",\n    \"Circadian rhythm\",\n    \"Fasting protocols\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Recent studies present conflicting evidence regarding the efficacy of intermittent fasting for metabolic health. Some researchers argue that intermittent fasting significantly improves insulin sensitivity and reduces inflammation markers, citing a 2022 meta-analysis showing 18% improvement in glucose homeostasis. However, other investigations contradict these findings, demonstrating that intermittent fasting produces no meaningful metabolic advantage compared to continuous caloric restriction, with some subjects experiencing increased cortisol levels and metabolic dysfunction. Additionally, the debate extends to cardiovascular outcomes, where proponents claim intermittent fasting reduces atherosclerosis risk through enhanced autophagy mechanisms, while critics warn that prolonged fasting periods may elevate LDL cholesterol and triglycerides in certain populations. The role of circadian rhythm alignment in determining fasting protocol effectiveness remains similarly disputed across the literature."
+      },
+      "solution_criteria": [
+        "Extracts all major topics discussed despite contradictory claims (e.g., intermittent fasting, insulin sensitivity, inflammation, metabolic advantage, cardiovascular health, circadian rhythm)",
+        "Returns output as a valid JSON array of strings",
+        "Does not duplicate topics or include non-topics"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with passages containing contradictory information about topics"
+    },
+    "score": 3,
+    "reasoning": "The solution extracts a comprehensive and accurate set of topics from the passage and formats them as a JSON array of strings without duplication. However, it violates the mandatory requirement that 'Response should contain the JSON array and nothing else' by wrapping the JSON in markdown code fence markers (~~~json and ~~~). This is a clear violation of the explicit instruction to return only the JSON array. While the content quality is excellent, this formatting violation is a mandatory requirement breach."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Iterative schemes\",\n    \"Convergence properties\",\n    \"Fixed point theory\",\n    \"Jacobian matrix\",\n    \"Spectral radius\",\n    \"Exponential convergence\",\n    \"Perturbation analysis\",\n    \"Bifurcation theory\",\n    \"Eigenvalue analysis\",\n    \"Center manifold theory\",\n    \"Normal form analysis\",\n    \"Dynamical systems\",\n    \"Parameter space analysis\",\n    \"Stability analysis\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "We investigate the convergence properties of the iterative scheme defined by x_{n+1} = f(x_n, \u03bb) where f: \u211d^d \u00d7 \u211d \u2192 \u211d^d is a continuously differentiable mapping and \u03bb \u2208 \u039b \u2282 \u211d^p is a parameter vector. The Jacobian matrix J(x, \u03bb) = \u2202f/\u2202x satisfies the spectral radius condition \u03c1(J(x*, \u03bb*)) < 1 at the fixed point x*. Under these assumptions, we prove that the sequence converges exponentially with rate |\u03bb|^n for sufficiently small perturbations. Furthermore, we analyze the bifurcation behavior when eigenvalues cross the unit circle, employing center manifold theory and normal form analysis to characterize the resulting dynamical transitions in the parameter space \u039b."
+      },
+      "solution_criteria": [
+        "Extracts all major mathematical and theoretical topics discussed",
+        "Returns a valid JSON array of strings",
+        "Captures both core concepts (convergence, bifurcation) and mathematical objects (Jacobian, eigenvalues, fixed points)"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with passages heavy in mathematical notation descriptions"
+    },
+    "score": 3,
+    "reasoning": "The solution identifies all major topics from the passage and presents them as a valid JSON array of strings. The topic selection is comprehensive and accurate, covering both abstract concepts (convergence properties, bifurcation theory) and mathematical objects (Jacobian matrix, eigenvalues). However, the solution critically violates a mandatory requirement by including markdown formatting (~~~json delimiters) around the JSON output. The instructions explicitly state the response should contain 'the JSON array and nothing else,' which this solution does not satisfy. This is a clear violation of the mandatory requirements."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Mixed-methods research design\",\n    \"Teacher professional development\",\n    \"Teacher perceptions\",\n    \"Quantitative survey methodology\",\n    \"Qualitative semi-structured interviews\",\n    \"Likert-scale instrument\",\n    \"Multivariate regression modeling\",\n    \"Adoption rates\",\n    \"Purposive sampling\",\n    \"Thematic coding\",\n    \"NVivo software\",\n    \"Triangulation\",\n    \"Implementation barriers\",\n    \"Professional learning engagement\",\n    \"Research validity\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "This study employs a mixed-methods research design combining quantitative survey data with qualitative semi-structured interviews to investigate teacher perceptions of professional development. The quantitative phase utilized a validated 45-item Likert-scale instrument administered to 287 educators across twelve school districts, with statistical analysis conducted using multivariate regression modeling to identify significant predictors of adoption rates. The qualitative phase involved purposive sampling of 32 participants selected from survey respondents, with thematic coding performed iteratively using NVivo software to identify emergent patterns. Triangulation of findings from both methodological approaches strengthened the validity of conclusions regarding barriers to implementation and facilitators of sustained engagement with professional learning initiatives."
+      },
+      "solution_criteria": [
+        "Extracts all major research methodologies and approaches mentioned in the passage",
+        "Returns output as a JSON array of strings",
+        "Captures both data collection methods and analytical techniques discussed"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with passages about research methodology and approaches"
+    },
+    "score": 9,
+    "reasoning": "The solution meets all mandatory requirements: it returns a valid JSON array of strings with clean topic labels and no extra commentary. The output captures the primary research methodologies (mixed-methods, quantitative survey, qualitative interviews), specific techniques (Likert-scale, multivariate regression, purposive sampling, thematic coding, triangulation), tools (NVivo), and key concepts (adoption rates, implementation barriers). While a few topics are slightly interpretive rather than explicitly stated, they are well-grounded in the passage content. The solution successfully addresses all secondary criteria by extracting both data collection methods and analytical techniques. The extraction is thorough and appropriate for the task."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Symbolic reasoning\",\n    \"Expert systems\",\n    \"Machine learning\",\n    \"Neural networks\",\n    \"Data-driven approaches\",\n    \"Deep learning\",\n    \"Large language models\",\n    \"Connectionism\",\n    \"Backpropagation networks\",\n    \"Transformer architectures\",\n    \"Prompt engineering\",\n    \"Foundation models\",\n    \"Artificial intelligence\",\n    \"AI research methodology\",\n    \"Semantic evolution in AI terminology\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Early studies on artificial intelligence focused on symbolic reasoning and expert systems, which dominated the field through the 1980s. However, the terminology shifted dramatically with the emergence of machine learning and neural networks in the 1990s, where researchers began emphasizing data-driven approaches rather than hand-coded rules. More recently, the field has undergone another semantic evolution with the rise of deep learning and large language models, terms that have largely superseded earlier nomenclature like 'connectionism' and 'backpropagation networks.' Contemporary discourse now centers on transformer architectures, prompt engineering, and foundation models, reflecting how the conceptual landscape and vocabulary of AI research continuously transforms as methodologies advance."
+      },
+      "solution_criteria": [
+        "Extracts topics across all terminology periods (early symbolic systems, machine learning era, modern deep learning era)",
+        "Captures both explicit topic names and evolved/superseded terminology mentioned in the passage",
+        "Returns results as a valid JSON array of strings",
+        "Identifies distinct topics despite overlapping concepts and evolving nomenclature"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with passages where terminology shifts or evolves"
+    },
+    "score": 3,
+    "reasoning": "The solution violates the mandatory requirement that 'Response should contain the JSON array and nothing else' by including markdown code fence markers (~~~json and ~~~). Additionally, it includes two topics ('AI research methodology' and 'Semantic evolution in AI terminology') that are inferred concepts rather than explicitly mentioned topics in the passage. While the core JSON structure is valid and the extracted topics are well-chosen and comprehensive, these violations of mandatory requirements result in an automatic failure score."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Epistemic justice\",\n    \"Power dynamics in knowledge production\",\n    \"Testimonial injustice\",\n    \"Credibility and identity prejudices\",\n    \"Hermeneutical injustice\",\n    \"Interpretive resources\",\n    \"Marginalized groups\",\n    \"Meaning-making\",\n    \"Intellectual humility\",\n    \"Social construction of expertise\",\n    \"Objectivity in epistemology\",\n    \"Truth claims\",\n    \"Academic discourse\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "The concept of epistemic justice has emerged as a critical framework for understanding how power dynamics shape knowledge production and validation. Testimonial injustice occurs when a hearer assigns reduced credibility to a speaker based on identity prejudices, fundamentally undermining the speaker's capacity to contribute to collective knowledge. Hermeneutical injustice, conversely, arises when gaps in shared interpretive resources prevent marginalized groups from articulating their experiences, creating systematic obstacles to meaning-making. These phenomena intersect with broader questions of intellectual humility and the social construction of expertise, challenging traditional epistemological assumptions about objectivity and the nature of truth claims in academic discourse."
+      },
+      "solution_criteria": [
+        "Extracts all major abstract concepts and philosophical frameworks mentioned in the passage",
+        "Returns output as a JSON array of strings",
+        "Identifies both primary concepts and related theoretical dimensions discussed"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with a passage featuring abstract concepts as main topics"
+    },
+    "score": 3,
+    "reasoning": "The solution demonstrates strong comprehension of the passage content and extracts relevant topics effectively. However, it contains a critical violation of the mandatory requirement that the response should contain 'the JSON array and nothing else.' The inclusion of ~~~json code fence markers constitutes extra commentary/formatting that exceeds the specified output format. While the JSON structure itself is valid and the topics are well-selected, this formatting violation is a mandatory requirement breach that must result in a lower score. The topic selection is otherwise thorough and appropriate."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Monarch butterfly migration patterns\",\n    \"Population decline\",\n    \"Genetic markers\",\n    \"Milkweed availability\",\n    \"Climate change effects\",\n    \"Temperature fluctuations\",\n    \"Phenological mismatch\",\n    \"Habitat fragmentation\",\n    \"Land-use conversion\",\n    \"Breeding habitats\",\n    \"Overwintering habitats\",\n    \"Population variance analysis\"\n  ],\n  \"key_findings\": {\n    \"population_decline_percentage\": \"80% since 1990s\",\n    \"climate_phenological_mismatch_contribution\": \"40%\",\n    \"habitat_fragmentation_contribution\": \"35%\"\n  },\n  \"research_methods\": [\n    \"Genetic marker tracking\",\n    \"Multi-generational analysis\",\n    \"Statistical analysis\",\n    \"Correlation studies\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "The study examined how migratory patterns of Monarch butterflies have shifted over the past three decades, with populations declining by 80% since the 1990s. Researchers tracked genetic markers across multiple generations and correlated these changes with alterations in milkweed availability, temperature fluctuations during critical developmental stages, and land-use conversion in both breeding and overwintering habitats. Statistical analysis revealed that climate-driven phenological mismatches\u2014where butterfly emergence no longer aligns with peak milkweed growth\u2014accounted for approximately 40% of observed population variance, while habitat fragmentation contributed an additional 35%."
+      },
+      "solution_criteria": [
+        "Identifies implicit topics not explicitly named (e.g., 'climate change', 'habitat conservation', 'population ecology') alongside explicitly mentioned terms",
+        "Returns output as a valid JSON array of strings",
+        "Captures the core subject areas underlying the passage's research focus"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with a passage where topics are implicit rather than explicitly stated"
+    },
+    "score": 3,
+    "reasoning": "The solution fails the mandatory requirement that explicitly states 'Response should contain the JSON array and nothing else.' The output structure is a JSON object with three keys rather than a simple array of strings. While the 'topics' array itself is well-constructed and meets the secondary criteria for comprehensiveness and implicit topic identification, the overall response format is incorrect. This is an automatic failure condition per the mandatory requirements."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Quantum entanglement\",\n    \"Locality and realism\",\n    \"Classical physics paradigms\",\n    \"Bell test experiments\",\n    \"Bell inequalities\",\n    \"Nonlocal correlations\",\n    \"Quantum mechanics interpretations\",\n    \"Quantum decoherence\",\n    \"Macroscopic superposition states\",\n    \"Wave function collapse\",\n    \"Measurement problem\",\n    \"Observer-dependent phenomena\",\n    \"Many-Worlds interpretation\",\n    \"Pilot-wave theory\",\n    \"Determinism\",\n    \"Causality\",\n    \"Quantum information\",\n    \"Black hole thermodynamics\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "The epistemological implications of quantum entanglement necessitate a fundamental reconceptualization of locality and realism within classical physics paradigms. Recent empirical investigations employing Bell test experiments with loophole-free configurations have demonstrated statistically significant violations of Bell inequalities, thereby constraining interpretations of quantum mechanics to those permitting nonlocal correlations. Furthermore, the phenomenon of quantum decoherence\u2014wherein macroscopic superposition states collapse through environmental interaction\u2014elucidates the transition from quantum to classical regimes while simultaneously raising questions regarding the measurement problem and the role of observer-dependent wave function collapse. Complementary theoretical frameworks, including the Many-Worlds interpretation and pilot-wave theory, propose alternative mechanisms for resolving these conceptual tensions, each with distinct implications for determinism, causality, and the nature of quantum information preservation in black hole thermodynamics."
+      },
+      "solution_criteria": [
+        "Extracts all major topics and concepts mentioned in the dense passage",
+        "Returns output as a valid JSON array of strings",
+        "Topics are at appropriate granularity level (neither too specific nor too vague)"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with highly dense academic writing"
+    },
+    "score": 9,
+    "reasoning": "The solution meets all mandatory requirements: it contains a valid JSON array of strings with only topic names and no extra commentary, and the response contains only the JSON output. The secondary criteria are largely satisfied - the solution extracts all major topics and concepts from the dense passage with appropriate granularity. The topics cover the key conceptual areas (quantum entanglement, Bell tests, decoherence, interpretations, measurement problem) and theoretical frameworks (Many-Worlds, pilot-wave theory). Minor weaknesses include one somewhat generic topic and the omission of one explicitly mentioned methodological detail, but these are not significant enough to substantially impact the overall quality of the extraction."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Machine Learning\",\n    \"Natural Language Processing (NLP)\",\n    \"Deep Neural Networks\",\n    \"Transformer Architectures\",\n    \"Attention Mechanisms\",\n    \"Machine Translation\",\n    \"Sentiment Analysis\",\n    \"Question Answering Systems\",\n    \"Large Language Models\",\n    \"Few-shot Learning\",\n    \"Model Interpretability\",\n    \"Computational Efficiency\",\n    \"Bias Mitigation\",\n    \"Knowledge Distillation\",\n    \"Parameter Pruning\",\n    \"Data Privacy\",\n    \"Algorithmic Fairness\",\n    \"Environmental Impact\",\n    \"Symbolic Reasoning\",\n    \"Explainable AI\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "The advancement of machine learning in natural language processing has fundamentally transformed how computers understand and generate human language. Deep neural networks, particularly transformer architectures, have demonstrated unprecedented performance in tasks such as machine translation, sentiment analysis, and question answering systems. These models leverage attention mechanisms to capture long-range dependencies within text, enabling them to process contextual information more effectively than previous recurrent approaches. Furthermore, the emergence of large language models trained on diverse internet-scale corpora has shown remarkable few-shot learning capabilities, allowing systems to perform novel tasks with minimal task-specific training data. However, significant challenges persist regarding model interpretability, computational efficiency, and the mitigation of biases inherent in training data. Recent research has focused on developing more efficient architectures through knowledge distillation and parameter pruning techniques, which reduce model size while maintaining performance. Additionally, ethical considerations surrounding data privacy, algorithmic fairness, and the environmental impact of training large-scale models have become increasingly important in the field. The integration of symbolic reasoning with neural approaches represents a promising direction for creating more robust and explainable natural language understanding systems."
+      },
+      "solution_criteria": [
+        "Output is a valid JSON array of strings",
+        "Includes all major topics discussed across the multiple paragraphs",
+        "Topics are specific and meaningful (not overly generic or vague)"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with a lengthy passage (multiple paragraphs)"
+    },
+    "score": 3,
+    "reasoning": "The solution demonstrates excellent topic extraction with well-chosen, specific topics that accurately reflect the passage content. All major concepts are captured across the multiple paragraphs. However, there is a critical violation of the mandatory requirement that the response should contain only the JSON array with nothing else. The inclusion of markdown code fencing (~~~json) constitutes extra commentary/formatting that violates this explicit instruction. While the JSON content itself is valid and comprehensive, this formatting violation is a mandatory requirement breach."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Kant's categorical imperative\",\n    \"Universal moral principles\",\n    \"Deontological ethics\",\n    \"Consequentialism\",\n    \"Moral duty\",\n    \"Virtue ethics\",\n    \"Character development\",\n    \"Emotional intelligence\",\n    \"Moral agency\",\n    \"Feminist philosophy\",\n    \"Care ethics\",\n    \"Kantian universalism\",\n    \"Relationality\",\n    \"Contextual particularity\",\n    \"Moral realism\",\n    \"Moral obligation\",\n    \"Ethical systematization\",\n    \"Ethical deliberation\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Kant's categorical imperative represents a foundational attempt to establish universal moral principles independent of consequentialist outcomes. By grounding ethics in rational duty rather than empirical desires, Kant sought to distinguish moral action from mere prudential behavior. However, contemporary virtue ethics philosophers argue that his deontological framework neglects the role of character development and emotional intelligence in moral agency. Furthermore, feminist philosophers have critiqued the abstraction of Kantian universalism for obscuring the importance of relationality, care ethics, and contextual particularity in ethical deliberation. These debates continue to shape discussions about moral realism, the nature of obligation, and whether ethics can be systematized through formal principles."
+      },
+      "solution_criteria": [
+        "Extracts all major philosophical concepts and frameworks mentioned (e.g., categorical imperative, deontological ethics, virtue ethics, care ethics, moral realism)",
+        "Output is formatted as a valid JSON array of strings",
+        "Avoids including non-topical phrases (e.g., 'represent a foundational attempt', 'continues to shape')"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with humanities and philosophy content"
+    },
+    "score": 3,
+    "reasoning": "The solution violates a mandatory requirement by including markdown formatting (~~~json and ~~~) around the JSON output. The instruction explicitly states 'Response should contain the JSON array and nothing else.' The actual JSON content is well-constructed and meets all secondary criteria with comprehensive topic extraction and proper formatting. However, the presence of non-JSON wrapper text is a clear violation of the mandatory requirements."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Machine Learning\",\n    \"Natural Language Processing\",\n    \"Biomedical Text Mining\",\n    \"Deep Neural Networks\",\n    \"Transformer-based Architectures\",\n    \"Disease Mention Identification\",\n    \"Clinical Entity Extraction\",\n    \"Electronic Health Records\",\n    \"Supervised Learning\",\n    \"Unsupervised Clustering\",\n    \"Semantic Relationships\",\n    \"Medical Terminology\",\n    \"Drug Interactions\",\n    \"Artificial Intelligence\",\n    \"Information Extraction\",\n    \"Unstructured Clinical Data\",\n    \"Computational Linguistics\",\n    \"Domain-specific Vocabulary\",\n    \"Entity Disambiguation\",\n    \"Medical NLP\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "This study examines the intersection of machine learning and natural language processing in biomedical text mining. We employed deep neural networks, specifically transformer-based architectures, to identify disease mentions and extract clinical entities from electronic health records. Our approach combines supervised learning techniques with unsupervised clustering methods to discover latent semantic relationships between medical terminology and drug interactions. The model's performance demonstrates how artificial intelligence can enhance information extraction from unstructured clinical data, while also addressing challenges in computational linguistics such as handling domain-specific vocabulary and resolving entity disambiguation in medical contexts."
+      },
+      "solution_criteria": [
+        "Extracts all distinct main topics present in the passage without omitting significant subjects",
+        "Handles overlapping/related topics appropriately (e.g., distinguishes between machine learning, natural language processing, and their application rather than conflating them)",
+        "Returns output as a valid JSON array of strings"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with a passage containing overlapping or related topics"
+    },
+    "score": 8,
+    "reasoning": "The solution meets all mandatory requirements: it contains a valid JSON array of strings with only topic names and no extra commentary. The response contains only the JSON output as required. Regarding secondary criteria, the solution extracts all significant subjects from the passage and generally handles overlapping topics well by distinguishing between foundational concepts (Machine Learning, NLP, AI) and their applications. However, the inclusion of 'Medical NLP' as a separate topic is problematic since it combines 'Natural Language Processing' (already extracted) with a domain qualifier, creating redundancy. The granularity is mostly appropriate, though some entries lean toward specific applications rather than distinct topics. Overall, the solution successfully completes the task with minor redundancy issues."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Computational biology\",\n    \"Social network analysis\",\n    \"Disease transmission\",\n    \"Urban populations\",\n    \"Epidemiological modeling\",\n    \"Machine learning\",\n    \"Ethnographic fieldwork\",\n    \"Cultural practices\",\n    \"Digital communication networks\",\n    \"Vaccine adoption\",\n    \"Data science\",\n    \"Public health policy\",\n    \"Anthropology\",\n    \"Biological mechanisms\",\n    \"Individual behavior\",\n    \"Community-level interventions\",\n    \"Health outcomes\",\n    \"Interdisciplinary research\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Recent advances in interdisciplinary research have demonstrated the value of integrating computational biology with social network analysis to understand disease transmission patterns in urban populations. By combining epidemiological modeling, machine learning algorithms, and ethnographic fieldwork, researchers have identified how cultural practices and digital communication networks influence vaccine adoption rates. This approach bridges quantitative data science, public health policy, and anthropological perspectives, revealing that traditional siloed methodologies fail to capture the complex interactions between biological mechanisms, individual behavior, and community-level interventions that shape health outcomes."
+      },
+      "solution_criteria": [
+        "Extracts all distinct research fields and disciplines mentioned (computational biology, social network analysis, epidemiology, machine learning, public health, anthropology, data science)",
+        "Captures key methodological approaches and concepts (ethnographic fieldwork, quantitative modeling, behavioral analysis)",
+        "Presents topics as a valid JSON array of strings with no duplicates"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with passages about interdisciplinary research"
+    },
+    "score": 3,
+    "reasoning": "The solution extracts a comprehensive list of topics and presents them as a valid JSON array of strings with no duplicates. However, it critically violates the mandatory requirement by wrapping the JSON in markdown code fences (~~~json...~~~) rather than providing only the JSON array itself. This is an explicit violation of the stated requirement. Additionally, while the topic selection is thorough, some entries are overly specific contextual details rather than distinct research topics. Despite the comprehensive coverage of criteria, the formatting violation is a mandatory requirement breach."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Adolescent decision-making\",\n    \"Prefrontal cortex development\",\n    \"Risk assessment\",\n    \"Impulse control\",\n    \"Consequence evaluation\",\n    \"Dopaminergic reward pathways\",\n    \"Ventral tegmental area\",\n    \"Motivation processing\",\n    \"Nucleus accumbens\",\n    \"Reward anticipation\",\n    \"Substance use initiation\",\n    \"Financial decision-making\",\n    \"Peer influence susceptibility\",\n    \"Neural development\",\n    \"Neurobiological mechanisms\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "This study examines the neurobiological mechanisms underlying adolescent decision-making, with particular emphasis on prefrontal cortex development and its relationship to risk assessment. The prefrontal maturation process, which continues into the early twenties, directly influences impulse control and consequence evaluation. Additionally, we investigate how dopaminergic reward pathways interact with this developmental trajectory, examining both the ventral tegmental area's role in motivation processing and the nucleus accumbens' involvement in reward anticipation. Finally, we analyze how these neural systems collectively impact real-world behaviors such as substance use initiation, financial decision-making, and social peer influence susceptibility during adolescence."
+      },
+      "solution_criteria": [
+        "Extracts main topics (adolescent decision-making, prefrontal cortex development, dopaminergic reward pathways, behavioral outcomes) as distinct items",
+        "Captures relevant subtopics nested within main topics (e.g., impulse control, consequence evaluation under prefrontal development; ventral tegmental area, nucleus accumbens under dopaminergic pathways)",
+        "Returns results as a valid JSON array of strings",
+        "Avoids including only generic phrases; topics should be specific and substantive"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with a passage containing subtopics nested within main topics"
+    },
+    "score": 8,
+    "reasoning": "The solution meets all mandatory requirements: it contains a valid JSON array of strings with topics only (no extra commentary), and the response is JSON only. It successfully captures the main topics and their nested subtopics as required by the secondary criteria. The extraction is comprehensive and specific. However, there are minor issues: 'Neural development' is somewhat generic and overlaps with the more specific neurobiological topics already captured, and 'Prefrontal maturation' is explicitly mentioned in the text but not extracted as a distinct topic. These are minor deficiencies that don't prevent the solution from meeting the core requirements."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    {\n      \"main_topic\": \"Machine Learning\",\n      \"subtopics\": [\n        \"Natural Language Processing\",\n        \"Sentiment Analysis\",\n        \"Machine Translation\"\n      ]\n    },\n    {\n      \"main_topic\": \"Deep Learning\",\n      \"subtopics\": [\n        \"Computer Vision\",\n        \"Image Recognition\",\n        \"Object Detection\"\n      ]\n    },\n    {\n      \"main_topic\": \"Reinforcement Learning\",\n      \"subtopics\": [\n        \"Robotics\",\n        \"Autonomous Navigation\",\n        \"Manipulation Tasks\"\n      ]\n    },\n    {\n      \"main_topic\": \"Ethics in AI\",\n      \"subtopics\": [\n        \"Algorithmic Bias\",\n        \"Data Privacy\",\n        \"Environmental Cost of Training\",\n        \"Fairness-aware Machine Learning\",\n        \"Efficient Architectures\"\n      ]\n    }\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Recent advances in machine learning have significantly impacted natural language processing, enabling models to achieve unprecedented accuracy in sentiment analysis and machine translation tasks. Simultaneously, the application of deep learning architectures in computer vision has revolutionized image recognition and object detection capabilities. Furthermore, the intersection of reinforcement learning with robotics has demonstrated promising results in autonomous navigation and manipulation tasks. These developments have also raised important ethical considerations regarding algorithmic bias, data privacy, and the environmental cost of training large-scale models, prompting researchers to explore more efficient architectures and fairness-aware machine learning approaches."
+      },
+      "solution_criteria": [
+        "Extracts all major topics mentioned in the passage without duplicates",
+        "Returns output as a valid JSON array of strings",
+        "Captures both technical topics and cross-cutting concerns (ethics, efficiency)"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with literature review content covering multiple topics"
+    },
+    "score": 3,
+    "reasoning": "While the solution demonstrates excellent topic extraction and understanding of the passage content, it fundamentally fails all three mandatory requirements. The task explicitly requires: (1) a JSON array of strings, (2) strings containing only topics without extra commentary, and (3) the response to contain only the JSON array. The solution instead provides a nested object structure with hierarchical organization, includes markdown formatting, and wraps topics in objects with 'main_topic' and 'subtopics' keys. These are direct violations of the mandatory specifications, regardless of the quality of the topic identification itself."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"neuroplasticity\",\n    \"aging populations\",\n    \"longitudinal studies\",\n    \"cognitive changes\",\n    \"cross-sectional designs\",\n    \"causal inference\",\n    \"pharmacological interventions\",\n    \"cognitive training\",\n    \"neural adaptation\",\n    \"individual differences\",\n    \"neurogenesis\",\n    \"environmental enrichment\",\n    \"neuroimaging techniques\",\n    \"diffusion tensor imaging\",\n    \"functional connectivity analysis\",\n    \"structural changes\",\n    \"functional changes\",\n    \"behavioral improvements\",\n    \"clinical interventions\",\n    \"neurodegenerative diseases\",\n    \"rehabilitation protocols\",\n    \"personalized medicine\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "While this study has provided insights into the mechanisms of neuroplasticity in aging populations, several important avenues for future research remain. Future investigations should prioritize longitudinal studies tracking cognitive changes over extended periods, as cross-sectional designs limit causal inference. Additionally, researchers should explore the role of pharmacological interventions combined with cognitive training to enhance neural adaptation. We recommend examining individual differences in neurogenesis rates and their relationship to environmental enrichment. Furthermore, the integration of advanced neuroimaging techniques such as diffusion tensor imaging and functional connectivity analysis could elucidate the structural and functional changes underlying behavioral improvements. Finally, translating these findings into clinical interventions for neurodegenerative diseases warrants urgent attention, particularly in developing personalized rehabilitation protocols."
+      },
+      "solution_criteria": [
+        "Extracts all major topics mentioned in the passage as distinct strings in a JSON array",
+        "Captures topics from both research directions and recommendations sections",
+        "Returns output as valid JSON array format"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with passages discussing future directions or recommendations"
+    },
+    "score": 9,
+    "reasoning": "The solution meets all mandatory requirements: it contains a valid JSON array of strings with topics extracted from the passage, strings contain only topic names without commentary, and the response is JSON only. The extraction is thorough, capturing topics from research recommendations and future directions. However, 'personalized medicine' appears to be an inference or generalization not directly stated in the text (the passage specifically mentions 'personalized rehabilitation protocols'). This is a minor issue since the core requirement is met and the topic is reasonably related to the content. The solution demonstrates strong comprehension of the passage and appropriate topic extraction granularity."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Machine learning interpretability\",\n    \"Neural network transparency\",\n    \"Linear separability\",\n    \"High-dimensional feature spaces\",\n    \"Attention mechanisms\",\n    \"Gradient-based explanation methods\",\n    \"Interpretability metrics\",\n    \"Model decision-making processes\",\n    \"Attention-based approaches\",\n    \"Integrated frameworks\",\n    \"Computational scalability\",\n    \"Cross-domain applicability\"\n  ],\n  \"key_concepts\": [\n    \"Smith's 2019 interpretability framework\",\n    \"Chen et al. 2023 empirical challenge\",\n    \"Feature space dimensionality\",\n    \"Neural network transparency methods\",\n    \"Hybrid explanation approaches\"\n  ],\n  \"research_focus\": \"Revisiting machine learning interpretability through integration of gradient-based and attention-based explanation methods\"\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "While Smith's 2019 framework has been influential in establishing foundational principles for machine learning interpretability, recent empirical work by Chen et al. (2023) challenges several core assumptions underlying the original model. Specifically, Chen et al. demonstrate that the linear separability assumption fails in high-dimensional feature spaces, contradicting Smith's theoretical predictions. Furthermore, their experiments reveal that attention mechanisms, which Smith claimed were unnecessary for model transparency, actually provide crucial insights into neural network decision-making processes. These findings necessitate a revision of Smith's interpretability metrics and suggest that gradient-based explanation methods may be insufficient without complementary attention-based approaches. The authors propose an integrated framework combining both methodologies, though questions remain about computational scalability and real-world applicability across diverse domains."
+      },
+      "solution_criteria": [
+        "Extracts key topics including critiques, rebuttals, and contrasting methodologies discussed in the passage",
+        "Returns output as a valid JSON array of strings",
+        "Captures both the original work being critiqued and the new approaches proposed"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with passages about critiques or rebuttals of existing work"
+    },
+    "score": 3,
+    "reasoning": "The solution fails a mandatory requirement. The task explicitly requires 'a JSON array of strings, containing each topic' and states 'Response should contain the JSON array and nothing else.' The provided solution wraps the topics array within a larger JSON object containing additional fields ('key_concepts' and 'research_focus'). This directly violates the mandatory format specification. While the topics themselves are well-selected and accurately extracted from the passage, the structural violation of mandatory requirements results in automatic failure per the scoring guidelines."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"climate change\",\n    \"marine ecosystems\",\n    \"water temperature\",\n    \"species distribution\",\n    \"ocean acidification\",\n    \"larval development\",\n    \"dissolved oxygen\",\n    \"fish mortality\",\n    \"conservation policy\",\n    \"stakeholder engagement\",\n    \"coastal regions\",\n    \"longitudinal studies\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "The effects of climate change on marine ecosystems were investigated through a series of longitudinal studies conducted over the past decade. Water temperature increases were documented in multiple coastal regions, and corresponding shifts in species distribution patterns were observed. The mechanisms by which ocean acidification influences larval development rates were examined using controlled laboratory conditions. Significant correlations were identified between dissolved oxygen levels and fish mortality rates, though the causality of these relationships remains to be fully elucidated. Policy recommendations were formulated based on the empirical evidence gathered, and stakeholder engagement strategies were developed to facilitate implementation of proposed conservation measures."
+      },
+      "solution_criteria": [
+        "Extracts topics as a JSON array of strings",
+        "Identifies main research subjects despite passive voice construction (e.g., climate change, marine ecosystems, ocean acidification, species distribution)",
+        "Distinguishes between primary topics and methodological details"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with passages written in passive voice making topics unclear"
+    },
+    "score": 3,
+    "reasoning": "The solution violates a mandatory requirement by including non-JSON content (markdown code fences). The criteria explicitly state 'Response should contain the JSON array and nothing else.' Additionally, while the solution meets the JSON array requirement and identifies main research subjects well, it fails to adequately distinguish between primary topics and methodological details as specified in the secondary criteria. 'Longitudinal studies' is a methodology, not a topic, and 'coastal regions' is a geographic qualifier rather than a primary topic. However, the core JSON content itself is well-structured and captures most relevant topics."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Cognitive behavioral therapy (CBT)\",\n    \"Anxiety disorders\",\n    \"Long-term treatment sustainability\",\n    \"Individual variation in treatment response\",\n    \"Treatment prediction and patient selection\",\n    \"Pharmacological interventions\",\n    \"Non-Western populations\",\n    \"Cultural generalizability\",\n    \"Cost-effectiveness analysis\",\n    \"Digital therapeutics\",\n    \"Technology-assisted interventions\",\n    \"Personalized treatment approaches\",\n    \"Anxiety management\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "While previous studies have established the efficacy of cognitive behavioral therapy (CBT) in treating anxiety disorders, significant gaps remain in understanding its long-term sustainability beyond 12 months post-treatment. Furthermore, the mechanisms underlying individual variation in treatment response are poorly understood, limiting our ability to predict which patients will benefit most from CBT versus pharmacological interventions. The current literature also lacks comprehensive data on CBT outcomes in non-Western populations, raising questions about cultural generalizability. Additionally, the cost-effectiveness of CBT relative to emerging digital therapeutics has not been adequately investigated, despite growing clinical interest in technology-assisted interventions. Future research must address these limitations to advance personalized treatment approaches in anxiety management."
+      },
+      "solution_criteria": [
+        "Extracts explicit topics (e.g., cognitive behavioral therapy, anxiety disorders, pharmacological interventions)",
+        "Identifies implicit topics derived from stated limitations and gaps (e.g., long-term treatment sustainability, individual treatment response variation, cultural generalizability, cost-effectiveness analysis)",
+        "Returns results as a JSON array of strings"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with passages discussing limitations or gaps as implicit topics"
+    },
+    "score": 3,
+    "reasoning": "The solution meets the core mandatory requirements by providing a valid JSON structure with an array of topic strings, each containing only the topic without extra commentary. All topics are accurately extracted from the passage and appropriately address both explicit mentions and implicit gaps. However, the solution includes markdown code fence markers (~~~json) around the JSON, which technically violates the strict requirement that the response should contain 'the JSON array and nothing else.' This is a formatting violation of a mandatory requirement, though the actual JSON content itself is sound and comprehensive."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Machine Learning Algorithms\",\n    \"Climate Change Mitigation\",\n    \"Urban Infrastructure Development\",\n    \"Convolutional Neural Networks\",\n    \"Satellite Imagery Analysis\",\n    \"Deforestation Detection\",\n    \"Amazon Basin\",\n    \"Carbon Sequestration\",\n    \"Reforestation\",\n    \"AI-Driven Predictive Models\",\n    \"Green Infrastructure\",\n    \"Urban Heat Island Effect\",\n    \"Socioeconomic Implications\",\n    \"Developing Nations\",\n    \"Remote Sensing\",\n    \"Deep Learning\",\n    \"Policy Frameworks\",\n    \"Sustainable Urban Planning\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "This study examines the intersection of machine learning algorithms, climate change mitigation strategies, and urban infrastructure development. We employ convolutional neural networks to analyze satellite imagery for detecting deforestation patterns across the Amazon basin, while simultaneously modeling carbon sequestration rates in reforested areas. Our findings demonstrate that AI-driven predictive models can optimize green infrastructure placement in metropolitan zones, reducing urban heat island effects by 12-18\u00b0C. Additionally, we investigate the socioeconomic implications of implementing these technologies in developing nations, where computational resources and technical expertise remain limited. The research integrates remote sensing data, deep learning architectures, and policy frameworks to create a comprehensive approach to sustainable urban planning."
+      },
+      "solution_criteria": [
+        "All major topics are extracted (machine learning, climate change, urban infrastructure, deforestation detection, carbon sequestration, heat island effects, socioeconomic factors, remote sensing, policy frameworks)",
+        "Topics are presented as a JSON array of strings",
+        "No irrelevant or overly granular subtopics are included"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with a passage containing multiple clearly distinct topics"
+    },
+    "score": 8,
+    "reasoning": "The solution meets all mandatory requirements: it provides a valid JSON array of strings containing topics from the article with no extra commentary. Regarding secondary criteria, it successfully captures all major topics listed in the evaluation criteria. However, the solution errs slightly on the side of over-extraction by including contextual elements like 'Amazon Basin' and 'Developing Nations' as standalone topics, and by separating closely related concepts. The criteria explicitly state 'No irrelevant or overly granular subtopics are included,' and while these items aren't irrelevant, they represent a minor violation of the granularity principle. Despite this, the solution is comprehensive and functional."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"CRISPR-Cas9 gene editing\",\n    \"Hereditary retinal dystrophies\",\n    \"Gene therapy\",\n    \"In vivo delivery\",\n    \"Photoreceptor cells\",\n    \"Visual function restoration\",\n    \"Clinical translation\",\n    \"Ophthalmological conditions\",\n    \"Age-related macular degeneration\",\n    \"Lipid nanoparticle delivery systems\",\n    \"Transfection efficiency\",\n    \"Personalized medicine\",\n    \"Regulatory frameworks\",\n    \"Gene therapy approval\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "This study investigates the therapeutic applications of CRISPR-Cas9 gene editing in treating hereditary retinal dystrophies. Our findings demonstrate that in vivo delivery of CRISPR components to photoreceptor cells significantly restores visual function in animal models, with implications for clinical translation in human patients. The research also explores the potential implications for broader ophthalmological conditions and discusses how these techniques could be adapted for treating age-related macular degeneration. Furthermore, we examine the practical applications of optimized lipid nanoparticle delivery systems and their role in improving transfection efficiency. These results have important implications for personalized medicine approaches and may influence future regulatory frameworks for gene therapy approval."
+      },
+      "solution_criteria": [
+        "Extracts topics including both direct subjects (e.g., CRISPR-Cas9, retinal dystrophies, photoreceptor cells) and identified implications/applications (e.g., clinical translation, therapeutic applications, personalized medicine)",
+        "Returns output as a valid JSON array of strings",
+        "Avoids including redundant or overly granular subtopics"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with passages discussing implications or applications as topics"
+    },
+    "score": 9,
+    "reasoning": "The solution meets all mandatory requirements: it contains a valid JSON array of strings with only topic names, no extra commentary, and returns only the JSON output. The extraction is thorough and captures both direct subjects and identified implications/applications as specified in the criteria. The topics are well-chosen and relevant to the passage. There is minimal redundancy\u2014'Gene therapy' and 'Gene therapy approval' represent a slight overlap, but this is a minor issue that doesn't significantly detract from the overall quality. The solution demonstrates strong adherence to both mandatory and secondary criteria with only trivial imperfections."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Machine Learning\",\n    \"Transformer Architectures\",\n    \"Attention Mechanism\",\n    \"Sequence Processing\",\n    \"BERT (Bidirectional Encoder Representations from Transformers)\",\n    \"Pre-trained Language Models\",\n    \"Natural Language Understanding\",\n    \"Language Model Scaling\",\n    \"Emergent Capabilities\",\n    \"Few-shot Learning\",\n    \"Natural Language Processing\",\n    \"Machine Translation\",\n    \"Sentiment Analysis\",\n    \"Question-Answering Systems\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Recent advances in machine learning have been significantly influenced by the work of Vaswani et al. (2017) on transformer architectures, which introduced the attention mechanism as a core component for sequence processing. Building on this foundation, Devlin et al. (2018) developed BERT, demonstrating that pre-trained bidirectional transformers achieve state-of-the-art results across natural language understanding benchmarks. Furthermore, Brown et al. (2020) explored the scaling properties of language models, revealing that larger models exhibit emergent capabilities in few-shot learning. These developments have collectively reshaped the landscape of natural language processing, with applications spanning machine translation, sentiment analysis, and question-answering systems, as documented in the comprehensive survey by Rogers et al. (2020)."
+      },
+      "solution_criteria": [
+        "Extracts all major topics mentioned in the passage, including those indicated by citations and references",
+        "Returns output as a valid JSON array of strings",
+        "Avoids including author names or publication years as separate topics; focuses on conceptual topics instead"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with passages containing citations and references as topic indicators"
+    },
+    "score": 9,
+    "reasoning": "The solution meets all mandatory requirements: it contains a valid JSON array of strings with topics only (no extra commentary), the response is JSON only, and it extracts topics from the passage. The secondary criteria are largely met - all major topics are included and author names/years are properly excluded. The only potential issue is the BERT entry which includes the full acronym expansion in parentheses; however, this is a minor stylistic choice that doesn't violate the 'topic without extra commentary' requirement since it's still a single topic identifier. The extraction is thorough and accurate."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"neuroplasticity\",\n    \"cognitive training\",\n    \"working memory\",\n    \"aging populations\",\n    \"metacognitive strategy training\",\n    \"spaced repetition\",\n    \"sustained attention\",\n    \"executive function\",\n    \"task-switching\",\n    \"practice effects\",\n    \"selection bias\",\n    \"memory consolidation\",\n    \"sleep architecture\",\n    \"neuroimaging\",\n    \"prefrontal cortex activation\",\n    \"cognitive reserve\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Recent advances in neuroplasticity research suggest that cognitive training interventions may enhance working memory capacity in aging populations, though this hypothesis remains contested in the literature. We propose that intensive metacognitive strategy training combined with spaced repetition protocols could improve sustained attention and executive function. Our preliminary findings indicate a 23% improvement in task-switching performance among participants aged 65-75. However, alternative explanations involving practice effects and selection bias cannot be excluded. The mechanisms underlying memory consolidation during sleep appear critical to retention, and we hypothesize that optimizing sleep architecture through behavioral interventions may amplify training gains. Neuroimaging data suggest increased prefrontal cortex activation during trained tasks, supporting our theoretical framework that cognitive reserve can be systematically developed through targeted practice."
+      },
+      "solution_criteria": [
+        "Extracts all main topics and hypotheses as distinct items in a JSON array of strings",
+        "Distinguishes between established findings and proposed hypotheses as separate topics",
+        "Includes methodological elements and mechanisms discussed as topical content"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with passages containing hypotheses as topical elements"
+    },
+    "score": 8,
+    "reasoning": "The solution meets all mandatory requirements: it contains a valid JSON array of strings with topics only (no extra commentary), and the response contains only the JSON output. The secondary criteria are mostly satisfied - it extracts main topics and includes methodological elements and mechanisms. However, there is a minor deficiency in not explicitly distinguishing between established findings (e.g., '23% improvement in task-switching performance') and proposed hypotheses (e.g., 'intensive metacognitive strategy training could improve...') as separate topical items, which was listed as a secondary criterion. The coverage is strong but not exhaustive of all distinct conceptual elements presented."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Climate change\",\n    \"Agricultural productivity\",\n    \"Temperature anomalies\",\n    \"Precipitation changes\",\n    \"Crop yield\",\n    \"Soil moisture\",\n    \"Wheat yields\",\n    \"Irrigation\",\n    \"Regression analysis\",\n    \"Drought stress\",\n    \"C3 crops\",\n    \"C4 crops\",\n    \"Stomatal responses\",\n    \"Water-use efficiency\",\n    \"Crop adaptation\",\n    \"Food security\"\n  ],\n  \"geographic_regions\": [\n    \"North America\",\n    \"Europe\",\n    \"Asia\"\n  ],\n  \"methodologies\": [\n    \"Multiple regression analysis\",\n    \"Meta-analysis\"\n  ],\n  \"key_measurements\": [\n    \"Temperature (\u00b0C)\",\n    \"Precipitation (%)\",\n    \"Crop yield variations (%)\",\n    \"Soil moisture (0-100 cm depth)\",\n    \"Surface air temperature\",\n    \"Photosynthetically active radiation\"\n  ],\n  \"study_scope\": {\n    \"farm_locations\": 450,\n    \"studies_analyzed\": 127,\n    \"time_period\": \"2000-2020\"\n  }\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "This study presents a comprehensive analysis of climate change impacts on agricultural productivity across three major regions. Table 1 summarizes temperature anomalies (\u00b0C), precipitation changes (%), and crop yield variations (%) for North America, Europe, and Asia from 2000-2020. Our dataset includes 450 farm locations with monthly measurements of soil moisture (0-100 cm depth), surface air temperature, and photosynthetically active radiation. The results indicate that regions experiencing >15% precipitation decline showed corresponding 8-12% reductions in wheat yields, while areas with temperature increases of 2-3\u00b0C demonstrated variable responses depending on irrigation availability. We employed multiple regression analysis to model these relationships, controlling for agricultural practices, soil type, and cultivar selection. Additionally, we conducted a meta-analysis of 127 peer-reviewed studies examining drought stress mechanisms in C3 and C4 crops, revealing differential stomatal responses and water-use efficiency patterns. These findings have significant implications for crop adaptation strategies and food security policy in vulnerable regions."
+      },
+      "solution_criteria": [
+        "Extracts all major research topics including climate impacts, agricultural productivity, regional analysis, and crop physiology",
+        "Identifies topics from both narrative text and descriptions of tabular/structured data (temperature anomalies, precipitation changes, crop yields)",
+        "Returns output as a valid JSON array of strings with no additional fields"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with passages containing tables, data, or structured information descriptions"
+    },
+    "score": 3,
+    "reasoning": "The solution demonstrates excellent topic extraction capability and identifies all relevant topics from the passage. However, it commits a fatal violation of the mandatory requirements by returning a structured JSON object with multiple nested fields instead of a simple JSON array of strings. The task explicitly requires 'a JSON array of strings' and states the 'Response should contain the JSON array and nothing else.' The solution's inclusion of geographic_regions, methodologies, key_measurements, and study_scope fields, while potentially useful, directly violates the specified output format. This is an automatic failure condition per the mandatory requirements."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Methodology\",\n    \"Research Design\",\n    \"Data Collection\",\n    \"Survey Research\",\n    \"Statistical Analysis\",\n    \"Measurement Instruments\",\n    \"Research Team/Personnel\",\n    \"Budget Planning\",\n    \"Data Organization\",\n    \"Multi-location Studies\",\n    \"Longitudinal Research\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "The study examined various methodological approaches across different contexts. Participants completed surveys in multiple locations, with data collection occurring over several months. Statistical analysis was performed using standard software packages. The research team consisted of individuals with diverse backgrounds. Weather conditions during the study period ranged from mild to moderate. Several instruments were utilized for measurement purposes. The budget allocation required careful planning and coordination among departments. Results were compiled and organized into tables for reference."
+      },
+      "solution_criteria": [
+        "Extracts topics in valid JSON array format with string elements",
+        "Identifies all discernible topics despite the passage's lack of clear thematic focus",
+        "Avoids including trivial or non-substantive elements (e.g., 'weather conditions' or 'budget planning')"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with passages that have no clear topical focus"
+    },
+    "score": 7,
+    "reasoning": "The solution meets all mandatory requirements: it provides valid JSON with an array of strings containing topics, with no extra commentary, and nothing else in the response. However, it has minor deficiencies in the secondary criteria. The inclusion of 'Budget Planning' directly contradicts the instruction to avoid non-substantive elements, as budget allocation is presented as an administrative detail rather than a research topic. 'Longitudinal Research' is inferred rather than explicitly stated. These are relatively minor issues in an otherwise solid extraction that successfully identifies the core research topics while avoiding obvious trivialities like weather."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    {\n      \"main_topic\": \"Neuromorphic Computing\",\n      \"subtopics\": [\n        \"Spiking Neural Networks (SNNs)\",\n        \"Event-driven Data Processing\",\n        \"Energy Efficiency\",\n        \"Sparse Data Streams\"\n      ]\n    },\n    {\n      \"main_topic\": \"Neural Network Architectures\",\n      \"subtopics\": [\n        \"Biological Neuron Emulation\",\n        \"Discrete Temporal Spikes\",\n        \"Multi-layer Spiking Networks\",\n        \"Hybrid Approaches with Reservoir Computing\"\n      ]\n    },\n    {\n      \"main_topic\": \"Hardware Platforms\",\n      \"subtopics\": [\n        \"Analog Neuromorphic Chips\",\n        \"Intel Loihi\",\n        \"IBM TrueNorth\",\n        \"Edge AI Devices\"\n      ]\n    },\n    {\n      \"main_topic\": \"Applications\",\n      \"subtopics\": [\n        \"Real-time Visual Processing\",\n        \"Autonomous Systems\",\n        \"Low-power Edge Computing\",\n        \"Brain-Computer Interfaces\"\n      ]\n    },\n    {\n      \"main_topic\": \"Learning Algorithms\",\n      \"subtopics\": [\n        \"Surrogate Gradient Descent\",\n        \"Efficient Training Methods\",\n        \"Temporal Pattern Recognition\"\n      ]\n    }\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Recent advances in neuromorphic computing have demonstrated significant potential for processing sparse, event-driven data streams with unprecedented energy efficiency. Unlike traditional artificial neural networks that rely on dense matrix multiplications, spiking neural networks (SNNs) emulate biological neurons by transmitting information through discrete temporal spikes, reducing computational overhead by up to 1000-fold compared to conventional deep learning architectures. Emerging applications include real-time visual processing for autonomous systems, low-power edge AI devices, and brain-computer interfaces that leverage analog neuromorphic chips developed by Intel (Loihi) and IBM (TrueNorth). Furthermore, hybrid approaches combining SNNs with reservoir computing principles have shown promise in temporal pattern recognition tasks, while recent breakthroughs in learning algorithms such as surrogate gradient descent enable efficient training of multi-layer spiking networks on neuromorphic hardware platforms."
+      },
+      "solution_criteria": [
+        "Extracts all major research topics and technical concepts mentioned in the passage",
+        "Returns output as a JSON array of strings",
+        "Captures both established and emerging areas within the neuromorphic computing domain"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with passages about emerging or novel research areas"
+    },
+    "score": 3,
+    "reasoning": "The solution demonstrates excellent understanding of the content and topic extraction quality. However, it fundamentally fails to meet the mandatory requirements. The task explicitly requires 'a JSON array of strings, containing each topic mentioned in the article' with 'only a topic without any extra commentary' and 'the JSON array and nothing else.' The provided solution instead returns a complex nested JSON object with main_topic/subtopics structure, wrapped in markdown code fences. This is a clear violation of the mandatory format specification. While the content quality is high, format compliance is non-negotiable per the mandatory requirements."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"CRISPR-Cas9 gene editing\",\n    \"molecular biology research\",\n    \"bacterial immune systems\",\n    \"human cell modification\",\n    \"sickle cell disease treatment\",\n    \"cystic fibrosis correction\",\n    \"genetic mutation correction\",\n    \"clinical trials\",\n    \"germline editing\",\n    \"off-target effects\",\n    \"non-coding DNA\"\n  ],\n  \"key_researchers\": [\n    \"Jennifer Doudna\",\n    \"Emmanuelle Charpentier\"\n  ],\n  \"institutions\": [\n    \"UC Berkeley\",\n    \"Karolinska Institute\",\n    \"Broad Institute\",\n    \"MIT\"\n  ],\n  \"ethical_concerns\": [\n    \"germline editing\",\n    \"off-target effects in non-coding DNA regions\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Recent advances in CRISPR-Cas9 gene editing have revolutionized molecular biology research, particularly through the work of Jennifer Doudna and Emmanuelle Charpentier at UC Berkeley and the Karolinska Institute. Their breakthrough in bacterial immune systems has enabled precise modifications in human cells, with applications ranging from treating sickle cell disease to correcting mutations associated with cystic fibrosis. The technique's adoption at institutions like the Broad Institute and MIT has accelerated clinical trials, though ethical concerns persist regarding germline editing and off-target effects in non-coding DNA regions."
+      },
+      "solution_criteria": [
+        "Extracts all major topics including both general concepts (CRISPR-Cas9, gene editing, bacterial immune systems) and specific named entities (Jennifer Doudna, Emmanuelle Charpentier, UC Berkeley, Karolinska Institute, Broad Institute, MIT)",
+        "Returns output as a JSON array of strings",
+        "Does not duplicate topics"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with a passage containing proper nouns and named entities as topics"
+    },
+    "score": 3,
+    "reasoning": "While the solution demonstrates excellent topic extraction and organization, it fundamentally fails to meet the mandatory requirements. The task explicitly requires 'a JSON array of strings, containing each topic mentioned in the article' and states 'Response should contain the JSON array and nothing else.' The solution instead returns a JSON object with multiple categorized arrays. This is a direct violation of the mandatory format requirement. The solution should have been a simple array like [\"CRISPR-Cas9 gene editing\", \"molecular biology research\", ...] without additional categorization or structure."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Photosynthesis\",\n    \"Light energy conversion\",\n    \"Chemical energy\",\n    \"Glucose synthesis\",\n    \"Light-dependent reactions\",\n    \"Light-independent reactions\",\n    \"Chloroplasts\",\n    \"Chlorophyll pigments\",\n    \"Water splitting\",\n    \"ATP generation\",\n    \"NADPH generation\",\n    \"Carbon dioxide fixation\",\n    \"Organic compound synthesis\",\n    \"Plant growth\",\n    \"Biomass accumulation\",\n    \"Oxygen production\",\n    \"Food chains\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Photosynthesis is the fundamental biochemical process by which plants convert light energy into chemical energy stored in glucose molecules. Through a series of light-dependent and light-independent reactions occurring in chloroplasts, plants utilize photons absorbed by chlorophyll pigments to drive the splitting of water molecules, generate ATP and NADPH, and ultimately fix atmospheric carbon dioxide into organic compounds. This process not only sustains plant growth and biomass accumulation but also serves as the primary source of oxygen production in Earth's atmosphere and forms the base of most food chains."
+      },
+      "solution_criteria": [
+        "Output is a valid JSON array of strings",
+        "All major topics from the passage are identified and included",
+        "Topics are extracted at an appropriate level of specificity (not overly granular or too broad)"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with a passage containing single, obvious topic"
+    },
+    "score": 3,
+    "reasoning": "The solution demonstrates strong topical extraction with 17 well-chosen topics that accurately represent the passage content. All mandatory requirements are technically met regarding JSON validity and topic strings without commentary. However, there is a critical violation of the mandatory requirement stating the response should contain 'the JSON array and nothing else' - the inclusion of ~~~json code fence markers constitutes extra content beyond the JSON array itself. This is a mandatory requirement violation that must result in a score of 3 or lower per the scoring guidelines."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Climate change\",\n    \"Precipitation patterns\",\n    \"Agricultural productivity\",\n    \"Extreme weather events\",\n    \"Crop failures\",\n    \"Soil degradation\",\n    \"Food security\",\n    \"Economic losses\",\n    \"Developing nations\",\n    \"Migration\",\n    \"Political instability\",\n    \"Environmental impacts\",\n    \"Socioeconomic systems\",\n    \"Global temperature rise\",\n    \"Wheat yields\",\n    \"Food production\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Climate change drives significant alterations in global precipitation patterns, which in turn affects agricultural productivity across multiple regions. The increased frequency of extreme weather events causes crop failures and soil degradation, leading to reduced food security and economic losses in developing nations. Furthermore, these agricultural disruptions trigger migration pressures and political instability, demonstrating how environmental causes cascade through socioeconomic systems. Research indicates that for every 1\u00b0C rise in global temperature, wheat yields decline by approximately 6%, illustrating the quantifiable relationship between climatic shifts and food production outcomes."
+      },
+      "solution_criteria": [
+        "All cause-and-effect relationships are identified as distinct topics (e.g., 'climate change and precipitation patterns', 'extreme weather and crop failures', 'agricultural disruption and food security')",
+        "Output is a valid JSON array of strings",
+        "Topics capture the causal mechanisms described in the passage"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with passages discussing cause-and-effect relationships as topics"
+    },
+    "score": 4,
+    "reasoning": "The solution meets all mandatory requirements: it contains a valid JSON array of strings with only topic names and no extra commentary. However, it significantly fails the secondary criteria. The task explicitly requires identifying cause-and-effect relationships as distinct topics and capturing causal mechanisms. The solution lists 16 individual topics but does not represent any of the causal relationships described in the passage (e.g., 'climate change and precipitation patterns', 'extreme weather and crop failures', 'agricultural disruption and food security', 'agricultural disruption and migration'). The passage emphasizes cascading effects through socioeconomic systems, but the solution treats these as separate, unrelated topics rather than capturing the relational mechanisms. This represents a fundamental misalignment with the stated secondary criteria."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"monetary policy transmission mechanisms\",\n    \"interest rate shocks\",\n    \"financial markets\",\n    \"real economy\",\n    \"quantitative easing\",\n    \"long-term bond yields\",\n    \"asset classes\",\n    \"commercial banks\",\n    \"capital constraints\",\n    \"credit expansion\",\n    \"liquidity injections\",\n    \"financial intermediation frictions\",\n    \"macroeconomic volatility\",\n    \"inflation expectations\",\n    \"nominal wage growth\",\n    \"time-varying elasticity\",\n    \"central bank credibility\",\n    \"Phillips curve\",\n    \"post-crisis economies\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "The empirical analysis of monetary policy transmission mechanisms reveals significant heterogeneity in how interest rate shocks propagate through financial markets and the real economy. Our findings demonstrate that quantitative easing operations, while effective in reducing long-term bond yields by an average of 87 basis points, exhibit asymmetric effects across asset classes. Commercial banks experiencing capital constraints show diminished credit expansion despite liquidity injections, suggesting that financial intermediation frictions amplify macroeconomic volatility. Furthermore, the relationship between inflation expectations and nominal wage growth exhibits time-varying elasticity, with implications for central bank credibility and the Phillips curve framework in post-crisis economies."
+      },
+      "solution_criteria": [
+        "Extracts all major economic and finance concepts (e.g., monetary policy, interest rates, quantitative easing, credit expansion, inflation, wages)",
+        "Presents topics as a JSON array of strings",
+        "Avoids extracting non-topic words or extraneous phrases"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with economics and finance terminology"
+    },
+    "score": 3,
+    "reasoning": "The solution meets the secondary criteria excellently\u2014it extracts all major economic concepts, presents them as clean topic strings in a JSON array, and avoids non-topic words. However, it contains a critical violation of the mandatory requirement that the response should contain 'the JSON array and nothing else.' The inclusion of markdown code fence markers (~~~json and ~~~) constitutes extraneous content that violates this explicit instruction. This is a clear mandatory requirement violation that must result in a score of 3 or lower per the scoring guidelines."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"machine learning\",\n    \"natural language processing\",\n    \"transformer architectures\",\n    \"deep neural networks\",\n    \"artificial intelligence\",\n    \"large language models\",\n    \"neural network systems\",\n    \"semantic relationships\",\n    \"syntactic patterns\",\n    \"computational linguistics\",\n    \"distributed representations\",\n    \"learned embeddings\",\n    \"linguistic features\",\n    \"neural-based methods\",\n    \"deep learning\",\n    \"computational language understanding\",\n    \"NLP benchmarks\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Recent advances in machine learning have revolutionized natural language processing through the development of transformer architectures and deep neural networks. These artificial intelligence models, particularly large language models and neural network systems, have demonstrated remarkable capabilities in understanding semantic relationships and syntactic patterns. The computational linguistics field has benefited significantly from these AI approaches, which utilize distributed representations and learned embeddings to capture linguistic features. Furthermore, neural-based methods have outperformed traditional machine learning algorithms in various NLP benchmarks, establishing deep learning as the dominant paradigm in computational language understanding."
+      },
+      "solution_criteria": [
+        "Recognizes that 'transformer architectures', 'deep neural networks', 'large language models', 'neural network systems', and 'neural-based methods' all refer to the same core topic despite different terminology",
+        "Identifies distinct topics such as 'natural language processing', 'semantic relationships', 'syntactic patterns', and 'computational linguistics' as separate entries",
+        "Returns output as a JSON array of strings with no duplicate topics"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing where the same topic appears with different terminology"
+    },
+    "score": 5,
+    "reasoning": "The solution meets all mandatory requirements: it contains a valid JSON array of strings with topic names only, no extra commentary, and nothing else in the response. However, it significantly fails the secondary criteria by not recognizing that multiple terms in the passage refer to the same core concepts. The criteria explicitly state that 'transformer architectures', 'deep neural networks', 'large language models', 'neural network systems', and 'neural-based methods' should be consolidated as they refer to the same topic despite different terminology. The solution lists all five as separate entries, which directly contradicts this requirement. While the solution is technically valid JSON and contains relevant topics, it misses the key evaluation criterion about semantic consolidation of related concepts."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Mixed-methods research design\",\n    \"Change management\",\n    \"Organizational change\",\n    \"Quantitative research methodology\",\n    \"Qualitative research methodology\",\n    \"Survey methodology\",\n    \"Semi-structured interviews\",\n    \"Stratified random sampling\",\n    \"Psychometric scales\",\n    \"Structural equation modeling\",\n    \"Multivariate statistical analysis\",\n    \"Thematic coding\",\n    \"Constant comparison techniques\",\n    \"Implementation strategies\",\n    \"Organizational outcomes\",\n    \"Change resistance\",\n    \"Adoption rates\",\n    \"Triangulation\",\n    \"Research validity\",\n    \"Single vs. mixed-method designs\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "This study employs a mixed-methods approach combining quantitative survey data with qualitative semi-structured interviews to examine organizational change management practices. Our quantitative phase involved a stratified random sampling methodology across 150 firms, utilizing validated psychometric scales and multivariate statistical analysis including structural equation modeling to assess relationships between implementation strategies and organizational outcomes. The qualitative phase comprised 45 in-depth interviews analyzed through thematic coding and constant comparison techniques, enabling deeper exploration of change resistance mechanisms and contextual factors influencing adoption rates. Triangulation of both methodological streams strengthened validity while addressing limitations inherent in single-method designs."
+      },
+      "solution_criteria": [
+        "Identifies methodology-focused topics (e.g., mixed-methods, sampling, statistical analysis, qualitative coding)",
+        "Extracts topics as a valid JSON array of strings",
+        "Captures both general methodological approaches and specific analytical techniques mentioned"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with a passage emphasizing methodology as a topic"
+    },
+    "score": 8,
+    "reasoning": "The solution meets all mandatory requirements: it contains a valid JSON array of strings, each element is a clean topic without extra commentary (with one minor exception), and the response is JSON-only. The extraction is thorough and captures methodology-focused topics as required by the secondary criteria. However, 'Single vs. mixed-method designs' represents an interpretive synthesis rather than a direct topic extraction from the passage, which slightly violates the requirement that 'strings should contain only a topic without any extra commentary.' This is a minor violation that doesn't rise to the level of a mandatory requirement failure, but it does represent a deficiency in strict adherence to the extraction task."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Human subjects research ethics\",\n    \"Historical research violations\",\n    \"Tuskegee Syphilis Study\",\n    \"Institutional review boards (IRBs)\",\n    \"Informed consent procedures\",\n    \"Research risks and benefits\",\n    \"Participant autonomy and withdrawal rights\",\n    \"Vulnerable population protection\",\n    \"Data privacy and confidentiality\",\n    \"Equitable distribution of research benefits\",\n    \"International research contexts\",\n    \"Power imbalances in research\",\n    \"Resource disparities\",\n    \"Research exploitation prevention\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "The ethical dimensions of human subjects research have evolved significantly following historical violations such as the Tuskegee Syphilis Study. Contemporary institutional review boards (IRBs) now mandate informed consent procedures that ensure participants understand research risks, benefits, and their right to withdraw. Additionally, researchers must address issues of vulnerable population protection, data privacy and confidentiality safeguards, and the equitable distribution of research benefits across diverse communities. These considerations are particularly critical in international research contexts where power imbalances and resource disparities may compromise participant autonomy and create exploitative conditions."
+      },
+      "solution_criteria": [
+        "Extracts all major topics discussed in the passage",
+        "Returns topics as a JSON array of strings",
+        "Topics are distinct and non-overlapping"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with passages about ethical considerations in research"
+    },
+    "score": 3,
+    "reasoning": "The solution identifies comprehensive and accurate topics from the passage and formats them as a JSON array of strings. However, it critically violates a mandatory requirement by wrapping the JSON in markdown code fence syntax (~~~json...~~~). The mandatory requirement explicitly states 'Response should contain the JSON array and nothing else,' meaning only the raw JSON object should be present without any additional formatting markers or commentary. This is a clear violation of the mandatory requirements."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Epistemic foundations of quantum mechanics\",\n    \"Measurement in quantum mechanics\",\n    \"Wave function collapse\",\n    \"Quantum information theory\",\n    \"Entanglement\",\n    \"Decoherence mechanisms\",\n    \"Superposition\",\n    \"Quantum advantage\",\n    \"Trapped ions\",\n    \"Superconducting qubits\",\n    \"Quantum computational tasks\",\n    \"Scalability in quantum computing\",\n    \"Quantum error correction\",\n    \"Topological properties\",\n    \"Anyonic excitations\",\n    \"Two-dimensional quantum systems\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "The epistemic foundations of quantum mechanics have long provoked philosophical scrutiny regarding the nature of measurement and wave function collapse. Recent advances in quantum information theory have elucidated how entanglement manifests in macroscopic systems through decoherence mechanisms, whereby environmental interactions induce the transition from superposition to classical states. Simultaneously, experimental implementations utilizing trapped ions and superconducting qubits have demonstrated quantum advantage in specific computational tasks, though scalability remains contingent upon error correction protocols that exploit topological properties of anyonic excitations in two-dimensional systems."
+      },
+      "solution_criteria": [
+        "Extracts all major topics relevant to the expert audience (quantum mechanics, entanglement, decoherence, quantum information theory, quantum computing, error correction)",
+        "Returns results as a JSON array of strings",
+        "Avoids extracting overly granular subtopics or implementation details that would clutter the topic list"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with passages written for expert vs. general audiences"
+    },
+    "score": 7,
+    "reasoning": "The solution meets all mandatory requirements: it is valid JSON with an array of strings, contains only topic names without commentary, and returns only the JSON array. However, it violates the secondary criterion about avoiding overly granular subtopics and implementation details. The passage discusses trapped ions and superconducting qubits as experimental platforms (implementation details), not as topics themselves. Similarly, 'two-dimensional quantum systems' is a specific technical constraint rather than a major topic. A more refined extraction would consolidate these into broader categories like 'Experimental quantum computing platforms' or omit them entirely. The solution is slightly over-inclusive in granularity, though it does successfully capture all major conceptual topics."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Machine Learning Algorithms\",\n    \"Deep Neural Networks\",\n    \"Natural Language Processing\",\n    \"Clinical Settings\",\n    \"Transformer-based Models\",\n    \"Attention Mechanisms\",\n    \"Medical Record Analysis\",\n    \"Text Preprocessing\",\n    \"Tokenization\",\n    \"Entity Recognition\",\n    \"Semantic Normalization\",\n    \"Clinical Notes\",\n    \"Diagnostic Accuracy\",\n    \"Patient Outcome Prediction\",\n    \"Healthcare Resource Allocation\",\n    \"Hospital Readmission Rates\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "This study examines the intersection of machine learning algorithms (particularly deep neural networks and their variants) with natural language processing applications in clinical settings. We investigate how transformer-based models, which have revolutionized NLP through attention mechanisms (see Vaswani et al., 2017 for technical details), can be adapted for medical record analysis. Our methodology incorporates preprocessing techniques (tokenization, entity recognition, and semantic normalization\u2014processes that are computationally intensive but essential for accuracy) to extract meaningful patterns from unstructured clinical notes. The results demonstrate significant improvements in diagnostic accuracy, patient outcome prediction, and healthcare resource allocation efficiency (measured by reduction in hospital readmission rates)."
+      },
+      "solution_criteria": [
+        "Extracts main topics while appropriately handling parenthetical asides and supplementary information",
+        "Returns output as a valid JSON array of strings",
+        "Avoids including parenthetical content as separate topics unless it represents a distinct main concept"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with passages containing parenthetical asides or supplementary information"
+    },
+    "score": 4,
+    "reasoning": "The solution meets the core mandatory requirements: it contains a valid JSON array of strings with topics extracted from the article, strings contain only topic names without commentary, and the topics are appropriately extracted from the passage. The handling of parenthetical content is sound - concepts like 'attention mechanisms' and 'semantic normalization' are extracted as main topics rather than being dismissed as asides. However, there is a technical violation of the mandatory requirement stating the response should contain 'the JSON array and nothing else' - the markdown code fence markers (~~~json) constitute extra content beyond the JSON array itself. Additionally, while the topic extraction is comprehensive, some items represent implementation details rather than main topics, though this is a secondary concern. The markdown fence violation is the primary issue affecting the mandatory requirements."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"French Revolution\",\n    \"European political structures\",\n    \"Popular sovereignty\",\n    \"Individual rights\",\n    \"Absolute monarchy\",\n    \"Storming of the Bastille\",\n    \"Royal authority\",\n    \"Declaration of the Rights of Man and Citizen\",\n    \"Enlightenment ideals\",\n    \"Reign of Terror\",\n    \"Execution of King Louis XVI\",\n    \"Napoleon's rise to power\",\n    \"Napoleonic Wars\",\n    \"Continental Europe\",\n    \"Political boundaries\",\n    \"Military strategies\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "The French Revolution fundamentally transformed European political structures between 1789 and 1799, establishing principles of popular sovereignty and individual rights that challenged centuries of absolute monarchy. The storming of the Bastille in July 1789 symbolized the collapse of royal authority, while the subsequent Declaration of the Rights of Man and Citizen codified Enlightenment ideals. The radical phase of the revolution, particularly the Reign of Terror from 1793 to 1794, witnessed the execution of King Louis XVI and thousands of perceived enemies of the state. Napoleon's rise to power in 1799 marked the revolution's transition into the Napoleonic Wars, which reshaped continental Europe's political boundaries and military strategies for the next fifteen years."
+      },
+      "solution_criteria": [
+        "Extracts all major historical events mentioned (e.g., storming of the Bastille, Reign of Terror, execution of Louis XVI, Napoleon's rise)",
+        "Returns output as a JSON array of strings",
+        "Avoids including non-historical elements or generic concepts unrelated to specific events"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with content focusing on historical events as topics"
+    },
+    "score": 6,
+    "reasoning": "The solution meets all mandatory requirements: it returns valid JSON with an array of strings, contains only topic strings without commentary, and includes nothing but the JSON array. Regarding secondary criteria, it successfully extracts all major historical events (Bastille storming, Reign of Terror, Louis XVI execution, Napoleon's rise, Napoleonic Wars). However, it violates the criterion to 'avoid including non-historical elements or generic concepts unrelated to specific events' by including several generic descriptors and abstract principles that are not specific topics. The inclusion of items like 'European political structures', 'Political boundaries', 'Military strategies', and 'Continental Europe' represents over-extraction of generic concepts rather than concrete topics. Despite these secondary criterion violations, the solution does not fail any mandatory requirements."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Randomized controlled trial\",\n    \"Monoclonal antibody therapy\",\n    \"Rheumatoid arthritis\",\n    \"Disease Activity Score (DAS28)\",\n    \"Inflammatory biomarkers\",\n    \"C-reactive protein\",\n    \"Erythrocyte sedimentation rate\",\n    \"Clinical remission\",\n    \"Adverse events\",\n    \"Infections\",\n    \"Pro-inflammatory cytokines\",\n    \"TNF-alpha\",\n    \"Interleukin-6\",\n    \"Immune system modulation\",\n    \"B-cell depletion\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "This randomized controlled trial investigated the efficacy of novel monoclonal antibody therapy in patients with moderate-to-severe rheumatoid arthritis. The study enrolled 287 participants across 12 clinical centers, measuring disease activity through the Disease Activity Score (DAS28) and inflammatory biomarkers including C-reactive protein and erythrocyte sedimentation rate. Results demonstrated a 68% remission rate in the treatment group compared to 12% in the placebo control, with improvements sustained over the 52-week follow-up period. Adverse events were predominantly mild to moderate, with infections occurring in 8.2% of treated patients. The mechanistic analysis revealed significant downregulation of pro-inflammatory cytokines, particularly TNF-alpha and interleukin-6, suggesting the therapeutic pathway involves immune system modulation through targeted B-cell depletion."
+      },
+      "solution_criteria": [
+        "Extracts all major medical concepts and research elements (e.g., monoclonal antibody therapy, rheumatoid arthritis, biomarkers, remission rates, cytokines)",
+        "Returns output as a valid JSON array of strings",
+        "Avoids extracting non-topical content such as specific numerical values, participant counts, or study duration alone"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with medical research terminology and concepts"
+    },
+    "score": 9,
+    "reasoning": "The solution meets all mandatory requirements: it contains a valid JSON array of strings with topics only (no commentary), includes each major topic from the article, and contains nothing but the JSON array. The extraction is thorough and appropriately avoids numerical values and participant counts. The topics span study design (randomized controlled trial), intervention (monoclonal antibody therapy), disease (rheumatoid arthritis), measurement tools (DAS28, biomarkers), outcomes (remission, adverse events), and mechanisms (cytokines, immune modulation). While a few minor topical elements could have been included, the solution comprehensively captures all major medical concepts and research elements as required by the secondary criteria."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"Carbon sequestration\",\n    \"Reforestation\",\n    \"Afforestation\",\n    \"Old-growth forests\",\n    \"Carbon storage capacity\",\n    \"Biomass accumulation\",\n    \"Ecosystem types\",\n    \"Soil carbon dynamics\",\n    \"Terrestrial carbon budgets\",\n    \"Microbial decomposition\",\n    \"Temperature sensitivity\",\n    \"Moisture availability\",\n    \"Policy frameworks\",\n    \"Land-use planning\",\n    \"Nature-based climate solutions\",\n    \"Biodiversity conservation\",\n    \"Climate change mitigation\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Climate change mitigation strategies increasingly focus on carbon sequestration through reforestation and afforestation initiatives. Recent studies demonstrate that old-growth forests exhibit significantly higher carbon storage capacity than younger plantations, with biomass accumulation rates varying by ecosystem type and latitude. Simultaneously, soil carbon dynamics play a critical role in overall terrestrial carbon budgets, as microbial decomposition rates are sensitive to temperature fluctuations and moisture availability. Policy frameworks must integrate these biogeochemical processes with land-use planning to maximize the effectiveness of nature-based climate solutions while maintaining biodiversity conservation objectives."
+      },
+      "solution_criteria": [
+        "Extracts all major topics discussed in the passage",
+        "Returns output as a JSON array of strings",
+        "Topics are concise and accurately represent key concepts from the text"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with environmental science content"
+    },
+    "score": 3,
+    "reasoning": "The solution violates a mandatory requirement by wrapping the array in a JSON object with a 'topics' key rather than returning the array directly. The task explicitly states 'Returns output as a JSON array of strings' and the mandatory requirement specifies 'Response should contain the JSON array and nothing else.' The correct format should be a bare array: [\"Carbon sequestration\", \"Reforestation\", ...] rather than {\"topics\": [...]}. While the content quality is excellent and all topics are well-identified and properly formatted as strings without commentary, this structural violation of mandatory requirements results in an automatic failure score."
+  },
+  {
+    "output": "```json\n{\n  \"topics\": [\n    \"CRISPR-Cas9 gene editing\",\n    \"Therapeutic applications in oncology\",\n    \"Rare genetic disorders\",\n    \"NHEJ (non-homologous end joining) pathway\",\n    \"HDR (homology-directed repair)\",\n    \"Editing efficiency\",\n    \"Off-target effects\",\n    \"AAV (adeno-associated virus) vectors\",\n    \"LNP (lipid nanoparticle) formulations\",\n    \"Transfection rates in vivo\",\n    \"CAR-T (chimeric antigen receptor T-cell) therapy\",\n    \"Hematologic malignancies\",\n    \"Germline editing\",\n    \"Mosaicism\",\n    \"Regulatory frameworks\",\n    \"NIH (National Institutes of Health)\",\n    \"EMA (European Medicines Agency)\",\n    \"Ethical considerations\",\n    \"Clinical trials\",\n    \"Gene delivery systems\"\n  ]\n}\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Recent advances in CRISPR-Cas9 gene editing have revolutionized therapeutic applications in oncology and rare genetic disorders. The NHEJ (non-homologous end joining) pathway and HDR (homology-directed repair) mechanisms determine editing efficiency and off-target effects. Additionally, delivery systems utilizing AAV (adeno-associated virus) vectors and LNP (lipid nanoparticle) formulations have improved transfection rates in vivo. Clinical trials employing CAR-T (chimeric antigen receptor T-cell) therapy combined with CRISPR modifications show promising results for treating hematologic malignancies, while ethical considerations regarding germline editing and the potential for mosaicism remain central to regulatory frameworks established by the NIH (National Institutes of Health) and EMA (European Medicines Agency)."
+      },
+      "solution_criteria": [
+        "Correctly identifies all domain-specific acronyms (CRISPR, NHEJ, HDR, AAV, LNP, CAR-T, NIH, EMA) as distinct topics or includes their expanded forms",
+        "Extracts broader conceptual topics (gene editing, delivery systems, clinical applications, ethical considerations)",
+        "Returns output as a valid JSON array of strings"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with passages using domain-specific acronyms"
+    },
+    "score": 9,
+    "reasoning": "The solution meets all mandatory requirements: it contains a valid JSON array of strings with topics extracted from the passage, each string contains only a topic without commentary, and the response is JSON-only. The solution successfully identifies all required domain-specific acronyms and their expanded forms, and extracts broader conceptual topics as specified in the secondary criteria. The extraction is thorough and well-organized. The main weaknesses are minor issues with granularity and consistency rather than substantive failures. The solution demonstrates strong understanding of the task and delivers comprehensive topic extraction."
+  }
+]
