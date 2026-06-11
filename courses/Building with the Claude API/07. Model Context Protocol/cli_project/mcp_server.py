@@ -40,7 +40,18 @@ def edit_docs_content_fn(
     docs[file_name] = docs[file_name].replace(old_str, new_str)
 
 # TODO: Write a resource to return all doc id's
+@mcp.resource("docs://documents", mime_type="application/json")
+def list_docs():
+    return list(docs.keys())
+
 # TODO: Write a resource to return the contents of a particular doc
+@mcp.resource("docs://documents/{file_name}", mime_type="text/plain")
+def fetch_doc(file_name: str) -> str:
+    if file_name not in docs:
+        raise ValueError(f"Doc with id {file_name} not found")
+
+    return docs[file_name]
+
 # TODO: Write a prompt to rewrite a doc in markdown format
 # TODO: Write a prompt to summarize a doc
 
