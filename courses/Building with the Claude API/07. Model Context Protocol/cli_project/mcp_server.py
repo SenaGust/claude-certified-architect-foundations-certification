@@ -1,4 +1,5 @@
 from mcp.server.fastmcp import FastMCP
+from mcp.server.fastmcp.prompts import base
 from pydantic import Field
 
 mcp = FastMCP("DocumentMCP", log_level="ERROR")
@@ -13,7 +14,7 @@ docs = {
     "spec.txt": "These specifications define the technical requirements for the equipment.",
 }
 
-# TODO: Write a tool to read a doc
+# Write a tool to read a doc
 @mcp.tool(
         name="read_docs_content", 
         description="Read the contents of a document and return it as a string."
@@ -24,7 +25,7 @@ def read_docs_content_fn(file_name: str=Field(description="name of the document"
 
     return docs[file_name]
 
-# TODO: Write a tool to edit a doc
+# Write a tool to edit a doc
 @mcp.tool(
     name="edit_docs_content",
     description="Edit a document by replacing a string in the documents content with a new string"
@@ -39,12 +40,12 @@ def edit_docs_content_fn(
     
     docs[file_name] = docs[file_name].replace(old_str, new_str)
 
-# TODO: Write a resource to return all doc id's
+# Write a resource to return all doc id's
 @mcp.resource("docs://documents", mime_type="application/json")
 def list_docs():
     return list(docs.keys())
 
-# TODO: Write a resource to return the contents of a particular doc
+# Write a resource to return the contents of a particular doc
 @mcp.resource("docs://documents/{file_name}", mime_type="text/plain")
 def fetch_doc(file_name: str) -> str:
     if file_name not in docs:
@@ -52,7 +53,28 @@ def fetch_doc(file_name: str) -> str:
 
     return docs[file_name]
 
-# TODO: Write a prompt to rewrite a doc in markdown format
+# Write a prompt to rewrite a doc in markdown format
+@mcp.prompt(
+    name="format",
+    description="Rewrites the contents of a document in Markdown format"
+)
+def format_fn(
+    file_name: str = Field(description="name of the document that will be formatted"),
+) -> list[base.Message]:
+    prompt = f"""
+    Your goal is to reformat a document to be written with markdown syntax.
+
+    The file name of the document you need to reformat is:
+    <file_name>
+    {file_name}
+    </file_name>
+
+    Add in headers, bullet points, tables, etc as necessary. Feel free to add in extra formatting.
+    Use the 'edit_docs_content' tool to edit the document. After the document has been reformatted...
+    """
+
+    return [base.UserMessage(prompt)]
+
 # TODO: Write a prompt to summarize a doc
 
 if __name__ == "__main__":
